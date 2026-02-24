@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vulnerafix</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:0;background:#0b0f14;color:#e6edf3}
+    .wrap{max-width:720px;margin:0 auto;padding:32px}
+    .card{background:#111826;border:1px solid #223046;border-radius:16px;padding:18px;margin:14px 0}
+    a.btn{display:block;text-decoration:none;color:#e6edf3;background:#162235;border:1px solid #2a3b55;border-radius:14px;padding:14px 16px;margin:10px 0}
+    a.btn:hover{border-color:#4a6ea8}
+    .muted{color:#9fb0c3}
+    .title{font-size:28px;margin:0 0 8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="title">Vulnerafix</h1>
+    <p class="muted">Remediación, defensa, y un camino limpio hacia adelante.</p>
+
+    <div class="card" id="links">Cargando…</div>
+
+    <div class="card">
+      <div class="muted">Contacto directo</div>
+      <a class="btn" href="https://wa.me/50762982064" target="_blank" rel="noreferrer">WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = "https://lucky-bush-a6e2.aalvarez351.workers.dev";
+
+    async function loadLinks() {
+      const box = document.getElementById("links");
+      try {
+        const res = await fetch(`${API_BASE}/api/links`);
+        const data = await res.json();
+        const links = data.links || [];
+        box.innerHTML = `<div class="muted">Accesos</div>` + links.map(l =>
+          `<a class="btn" href="${API_BASE}/go/${encodeURIComponent(l.slug)}" target="_blank" rel="noreferrer">${escapeHtml(l.title)}</a>`
+        ).join("");
+      } catch (e) {
+        box.textContent = "No se pudieron cargar los links.";
+      }
+    }
+    function escapeHtml(s){
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+    loadLinks();
+  </script>
+</body>
+</html>
