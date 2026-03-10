@@ -3,175 +3,133 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vulnerafix</title>
-  <meta name="description" content="Remediación, defensa y claridad operativa. Vulnerafix." />
+  <title>Vulnerafix | Auditoría IT y Remediación de Vulnerabilidades — Panamá</title>
+  <meta name="description" content="ATAPAudit: identificamos, priorizamos y cerramos vulnerabilidades en tu infraestructura alineadas a NIST 800-53 e ISO 27001. Empresa de ciberseguridad en Panamá." />
+  <meta name="keywords" content="auditoría IT Panamá, vulnerabilidades, NIST 800-53, ISO 27001, remediación, ciberseguridad Panamá, ATAPAudit" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vulnerafix | Auditoría IT y Remediación de Vulnerabilidades — Panamá" />
+  <meta property="og:description" content="Identificamos, priorizamos y cerramos vulnerabilidades en tu infraestructura. NIST 800-53 · ISO 27001 · Ley 81." />
+  <meta property="og:url" content="https://vulnerafix.com/" />
+  <meta property="og:locale" content="es_PA" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ2DZ3XPKM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QJ2DZ3XPKM');
+  </script>
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ATAPAudit — Vulnerafix",
+    "url": "https://vulnerafix.com/",
+    "description": "Servicios de auditoría IT, remediación de vulnerabilidades y cumplimiento normativo en Panamá. Alineados a NIST 800-53, ISO 27001 y Ley 81.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressCountry": "PA" },
+    "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "telephone": "+50762982064", "availableLanguage": "Spanish" },
+    "areaServed": ["Panamá", "LATAM"],
+    "serviceType": ["Auditoría IT", "Remediación de vulnerabilidades", "Cumplimiento NIST", "Cumplimiento ISO 27001", "Consultoría Ley 81"]
+  }
+  </script>
 
   <style>
     :root{
-      --bg0:#070A10;
-      --bg1:#0B0F1A;
+      --bg0:#070A10; --bg1:#0B0F1A;
       --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --stroke: rgba(255,255,255,.10);
-      --stroke2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.12);
       --text:#EAF0FF;
       --muted:rgba(234,240,255,.72);
       --muted2:rgba(234,240,255,.55);
       --shadow: 0 18px 60px rgba(0,0,0,.55);
-      --r: 18px;
-      --r2: 26px;
-      --pad: 18px;
-      --pad2: 22px;
+      --r: 18px; --r2: 26px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
     }
-
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
-      margin:0;
-      font-family:var(--sans);
-      color:var(--text);
+      margin:0; font-family:var(--sans); color:var(--text);
       background:
         radial-gradient(1200px 600px at 18% -8%, rgba(120,80,255,.35), transparent 60%),
         radial-gradient(900px 500px at 90% 10%, rgba(0,220,255,.24), transparent 55%),
         radial-gradient(1000px 700px at 60% 110%, rgba(255,80,160,.18), transparent 55%),
         linear-gradient(180deg, var(--bg0), var(--bg1));
-      overflow-x:hidden;
+      min-height:100vh;
     }
-
-    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 64px;}
-    .top{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:14px 0 6px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      user-select:none;
-    }
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 64px;}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:14px 0 6px;}
+    .brand{display:flex;align-items:center;gap:10px;user-select:none;}
     .logo{
-      width:38px; height:38px; border-radius:14px;
+      width:38px;height:38px;border-radius:14px;
       background:
         radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.75), transparent 60%),
         linear-gradient(135deg, rgba(120,80,255,.95), rgba(0,220,255,.75));
       box-shadow: 0 10px 32px rgba(0,0,0,.45);
       border:1px solid rgba(255,255,255,.18);
     }
-    .brand h1{margin:0; font-size:18px; letter-spacing:.2px;}
+    .brand h1{margin:0;font-size:18px;letter-spacing:.2px;}
     .chip{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px; border-radius:999px;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
       background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.12);
-      color:var(--muted);
-      font-size:12px;
+      color:var(--muted);font-size:12px;
     }
-    .dot{width:7px;height:7px;border-radius:99px;background:rgba(126,231,135,.95); box-shadow:0 0 18px rgba(126,231,135,.45);}
-
+    .dot{width:7px;height:7px;border-radius:99px;background:rgba(126,231,135,.95);box-shadow:0 0 18px rgba(126,231,135,.45);}
     .hero{
-      margin-top:14px;
-      padding:22px;
-      border-radius: var(--r2);
+      margin-top:14px;padding:22px;border-radius:var(--r2);
       background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
       border:1px solid rgba(255,255,255,.12);
       box-shadow: var(--shadow);
-      position:relative;
-      overflow:hidden;
+      position:relative; overflow:hidden;
     }
     .hero:before{
-      content:"";
-      position:absolute; inset:-60px -40px auto auto;
-      width:220px; height:220px; border-radius:999px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), rgba(255,255,255,0) 60%),
-                  radial-gradient(circle at 70% 80%, rgba(0,220,255,.22), rgba(0,220,255,0) 62%);
-      filter: blur(2px);
-      transform: rotate(12deg);
-      pointer-events:none;
+      content:""; position:absolute; inset:-60px -40px auto auto;
+      width:220px;height:220px;border-radius:999px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), rgba(255,255,255,0) 60%),
+        radial-gradient(circle at 70% 80%, rgba(0,220,255,.22), rgba(0,220,255,0) 62%);
+      transform: rotate(12deg); pointer-events:none;
     }
-
-    .kicker{color:var(--muted); font-size:13px; letter-spacing:.14em; text-transform:uppercase;}
-    .headline{
-      margin:10px 0 10px;
-      font-size:40px;
-      line-height:1.05;
-      letter-spacing:-.03em;
-    }
-    .sub{
-      margin:0;
-      color:var(--muted);
-      max-width:64ch;
-      font-size:15.5px;
-      line-height:1.55;
-    }
-
-    .grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:14px;
-    }
-    @media (max-width: 860px){
-      .grid{grid-template-columns:1fr}
-      .headline{font-size:34px}
-    }
-
+    .kicker{color:var(--muted);font-size:13px;letter-spacing:.14em;text-transform:uppercase;}
+    .headline{margin:10px 0 10px;font-size:40px;line-height:1.05;letter-spacing:-.03em;}
+    .sub{margin:0;color:var(--muted);max-width:64ch;font-size:15.5px;line-height:1.55;}
+    .grid{margin-top:18px;display:grid;grid-template-columns:1.2fr .8fr;gap:14px;}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} .headline{font-size:34px} }
     .card{
-      background: var(--card);
+      background:var(--card);
       border:1px solid var(--stroke);
-      border-radius: var(--r);
-      padding: var(--pad2);
+      border-radius:var(--r);
+      padding:20px;
       box-shadow: 0 10px 40px rgba(0,0,0,.35);
       backdrop-filter: blur(10px);
     }
-    .card h2{
-      margin:0 0 10px;
-      font-size:15px;
-      letter-spacing:.02em;
-      color: rgba(234,240,255,.92);
-    }
+    .card h2{margin:0 0 10px;font-size:15px;letter-spacing:.02em;color:rgba(234,240,255,.92);}
     .card p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
-
-    .bento{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-      margin-top:12px;
-    }
-    @media (max-width: 520px){
-      .bento{grid-template-columns:1fr}
-    }
-
+    .bento{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;}
+    @media (max-width: 520px){ .bento{grid-template-columns:1fr} }
     .btn{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px;
-      padding:14px 14px;
-      border-radius:14px;
-      text-decoration:none;
-      color:var(--text);
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:14px 14px;border-radius:14px;text-decoration:none;color:var(--text);
       background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
       border:1px solid rgba(255,255,255,.14);
-      transition: transform .15s ease, border-color .15s ease, background .15s ease;
-      will-change: transform;
+      transition: transform .15s ease, border-color .15s ease;
+      will-change:transform;
     }
-    .btn:hover{transform: translateY(-2px); border-color: rgba(255,255,255,.22);}
-    .btn:active{transform: translateY(0px) scale(.99);}
+    .btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.22);}
+    .btn:active{transform:translateY(0px) scale(.99);}
     .btn .t{font-weight:600}
-    .btn .m{font-family:var(--mono); font-size:12px; color:var(--muted2)}
+    .btn .m{font-family:var(--mono);font-size:12px;color:var(--muted2)}
     .arrow{opacity:.85}
-
-    .miniRow{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;
-    }
+    .miniRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
     .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      background: rgba(255,255,255,.06);
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.12);
-      color:var(--muted);
-      font-size:12px;
+      color:var(--muted);font-size:12px;
     }
-
     .status{margin-top:10px;color:var(--muted2);font-size:12px}
     .err{color:#ffb4b4}
     .foot{margin-top:16px;color:var(--muted2);font-size:12px}
@@ -189,23 +147,17 @@
           <div class="chip"><span class="dot"></span> Operativo</div>
         </div>
       </div>
-      <div class="chip" title="Stack">
-        Cloudflare Workers + D1 · GitHub Pages
-      </div>
+      <div class="chip" title="Stack">Cloudflare Workers + D1 · GitHub Pages</div>
     </div>
 
     <section class="hero">
-      <div class="kicker">Seguridad que se siente</div>
-      <div class="headline">Remediación rápida. Defensa clara.</div>
-      <p class="sub">
-        Menos ruido. Más control. Un frente limpio donde tus clientes entienden qué haces
-        y cómo contactarte, con métricas reales detrás.
-      </p>
-
+      <div class="kicker">Ciberseguridad · Panamá</div>
+      <div class="headline">Auditoría IT.<br>Remediación real.</div>
+      <p class="sub">Identificamos, priorizamos y cerramos las vulnerabilidades de tu infraestructura, alineadas a NIST 800-53 e ISO 27001. Sin ruido. Con evidencia.</p>
       <div class="miniRow">
-        <span class="pill">⚡ Tracking de clicks</span>
-        <span class="pill">🧱 Bento UI</span>
-        <span class="pill">🕶️ Dark-first</span>
+        <span class="pill">✅ NIST 800-53</span>
+        <span class="pill">✅ ISO/IEC 27001</span>
+        <span class="pill">✅ Ley 81 Panamá</span>
       </div>
     </section>
 
@@ -214,10 +166,7 @@
         <h2>Accesos</h2>
         <div id="links" class="bento">
           <div class="btn" style="opacity:.7">
-            <div>
-              <div class="t">Cargando…</div>
-              <div class="m">/api/links</div>
-            </div>
+            <div><div class="t">Cargando…</div><div class="m">/api/links</div></div>
             <div class="arrow">→</div>
           </div>
         </div>
@@ -227,25 +176,19 @@
       <div class="card">
         <h2>Contacto directo</h2>
         <p>Si hay urgencia, el camino es uno: directo, simple, sin fricción.</p>
-
         <div style="margin-top:12px">
           <a class="btn" href="https://wa.me/50762982064" target="_blank" rel="noreferrer">
-            <div>
-              <div class="t">WhatsApp</div>
-              <div class="m">Respuesta rápida</div>
-            </div>
+            <div><div class="t">WhatsApp</div><div class="m">Respuesta rápida</div></div>
             <div class="arrow">↗</div>
           </a>
         </div>
-
-        <div class="foot">
-          Admin: <a href="./admin.html">abrir panel</a>
-        </div>
+        <div class="foot">Admin: <a href="./admin.html">abrir panel</a></div>
       </div>
     </section>
   </div>
 
   <script>
+    // 👇 TU API (Worker)
     const API_BASE = "https://lucky-bush-a6e2.aalvarez351.workers.dev";
 
     const linksBox = document.getElementById("links");
@@ -254,7 +197,6 @@
     function esc(s){
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     }
-
     function slugToHint(slug){
       if(slug === "whatsapp") return "Contacto";
       if(slug === "linkedin") return "Credibilidad";
@@ -275,7 +217,8 @@
         }
 
         linksBox.innerHTML = links.map(l => `
-          <a class="btn" href="${API_BASE}/go/${encodeURIComponent(l.slug)}" target="_blank" rel="noreferrer">
+          <a class="btn" href="${API_BASE}/go/${encodeURIComponent(l.slug)}" target="_blank" rel="noreferrer"
+             onclick="if(typeof gtag==='function'){gtag('event','click_servicio',{event_category:'Hub',event_label:'${esc(l.slug)}'});}">
             <div>
               <div class="t">${esc(l.title)}</div>
               <div class="m">${esc(slugToHint(l.slug))} · /go/${esc(l.slug)}</div>
