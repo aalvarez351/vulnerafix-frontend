@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vulnerafix | Auditoría IT y Remediación de Vulnerabilidades — Panamá</title>
-  <meta name="description" content="ATAPAudit: identificamos, priorizamos y cerramos vulnerabilidades en tu infraestructura alineadas a NIST 800-53 e ISO 27001. Empresa de ciberseguridad en Panamá." />
-  <meta name="keywords" content="auditoría IT Panamá, vulnerabilidades, NIST 800-53, ISO 27001, remediación, ciberseguridad Panamá, ATAPAudit" />
+  <title>VulneraFix — Escáner de Seguridad & Auditoría IT · Panamá</title>
+  <meta name="description" content="Escanea tu IP o dominio en segundos. Detectamos vulnerabilidades reales antes que los hackers. NIST 800-53 · OWASP Top 10 · ISO 27001. Desde $9 USDT." />
+  <meta name="keywords" content="escáner vulnerabilidades, auditoría IT Panamá, pentest online, NIST 800-53, OWASP, ciberseguridad, vulnerafix, ATAPAudit" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Vulnerafix | Auditoría IT y Remediación de Vulnerabilidades — Panamá" />
-  <meta property="og:description" content="Identificamos, priorizamos y cerramos vulnerabilidades en tu infraestructura. NIST 800-53 · ISO 27001 · Ley 81." />
+  <meta property="og:title" content="VulneraFix — Escáner de Seguridad Online · Desde $9" />
+  <meta property="og:description" content="Escanea tu IP o dominio. Detectamos 50+ vectores de ataque. Recibe tu reporte PDF en minutos." />
   <meta property="og:url" content="https://vulnerafix.com/" />
   <meta property="og:locale" content="es_PA" />
   <!-- Google Analytics -->
@@ -24,217 +24,2049 @@
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "ATAPAudit — Vulnerafix",
+    "name": "VulneraFix — ATAPAudit",
     "url": "https://vulnerafix.com/",
-    "description": "Servicios de auditoría IT, remediación de vulnerabilidades y cumplimiento normativo en Panamá. Alineados a NIST 800-53, ISO 27001 y Ley 81.",
+    "description": "Escáner de seguridad online y auditoría IT profesional. Detectamos vulnerabilidades en IPs, dominios e infraestructura. Panamá y LATAM.",
     "address": { "@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressCountry": "PA" },
-    "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "telephone": "+50762982064", "availableLanguage": "Spanish" },
+    "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "telephone": "+50762982064", "availableLanguage": "Spanish" },
     "areaServed": ["Panamá", "LATAM"],
-    "serviceType": ["Auditoría IT", "Remediación de vulnerabilidades", "Cumplimiento NIST", "Cumplimiento ISO 27001", "Consultoría Ley 81"]
+    "priceRange": "$9 - $99",
+    "serviceType": ["Escáner de Vulnerabilidades", "Auditoría IT", "Pentest", "Cumplimiento NIST", "ISO 27001"]
   }
   </script>
 
   <style>
-    :root{
-      --bg0:#070A10; --bg1:#0B0F1A;
-      --card: rgba(255,255,255,.06);
-      --stroke: rgba(255,255,255,.12);
-      --text:#EAF0FF;
-      --muted:rgba(234,240,255,.72);
-      --muted2:rgba(234,240,255,.55);
-      --shadow: 0 18px 60px rgba(0,0,0,.55);
-      --r: 18px; --r2: 26px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    :root {
+      --bg: #040916;
+      --bg1: #060d1f;
+      --bg2: #0a1228;
+      --cyan: #00c6ff;
+      --blue: #0066ff;
+      --green: #00e676;
+      --red: #ff4444;
+      --orange: #ff9100;
+      --text: #e8f0ff;
+      --muted: rgba(232,240,255,.65);
+      --muted2: rgba(232,240,255,.4);
+      --card: rgba(255,255,255,.04);
+      --card-h: rgba(255,255,255,.07);
+      --stroke: rgba(100,160,255,.15);
+      --glow-c: rgba(0,198,255,.18);
+      --glow-b: rgba(0,102,255,.18);
+      --mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:var(--sans); color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 18% -8%, rgba(120,80,255,.35), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(0,220,255,.24), transparent 55%),
-        radial-gradient(1000px 700px at 60% 110%, rgba(255,80,160,.18), transparent 55%),
-        linear-gradient(180deg, var(--bg0), var(--bg1));
-      min-height:100vh;
-    }
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 64px;}
-    .top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:14px 0 6px;}
-    .brand{display:flex;align-items:center;gap:10px;user-select:none;}
-    .logo{
-      width:38px;height:38px;border-radius:14px;
-      background:
-        radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.75), transparent 60%),
-        linear-gradient(135deg, rgba(120,80,255,.95), rgba(0,220,255,.75));
-      box-shadow: 0 10px 32px rgba(0,0,0,.45);
-      border:1px solid rgba(255,255,255,.18);
-    }
-    .brand h1{margin:0;font-size:18px;letter-spacing:.2px;}
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color:var(--muted);font-size:12px;
-    }
-    .dot{width:7px;height:7px;border-radius:99px;background:rgba(126,231,135,.95);box-shadow:0 0 18px rgba(126,231,135,.45);}
-    .hero{
-      margin-top:14px;padding:22px;border-radius:var(--r2);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow: var(--shadow);
-      position:relative; overflow:hidden;
-    }
-    .hero:before{
-      content:""; position:absolute; inset:-60px -40px auto auto;
-      width:220px;height:220px;border-radius:999px;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), rgba(255,255,255,0) 60%),
-        radial-gradient(circle at 70% 80%, rgba(0,220,255,.22), rgba(0,220,255,0) 62%);
-      transform: rotate(12deg); pointer-events:none;
-    }
-    .kicker{color:var(--muted);font-size:13px;letter-spacing:.14em;text-transform:uppercase;}
-    .headline{margin:10px 0 10px;font-size:40px;line-height:1.05;letter-spacing:-.03em;}
-    .sub{margin:0;color:var(--muted);max-width:64ch;font-size:15.5px;line-height:1.55;}
-    .grid{margin-top:18px;display:grid;grid-template-columns:1.2fr .8fr;gap:14px;}
-    @media (max-width: 860px){ .grid{grid-template-columns:1fr} .headline{font-size:34px} }
-    .card{
-      background:var(--card);
-      border:1px solid var(--stroke);
-      border-radius:var(--r);
-      padding:20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,.35);
-      backdrop-filter: blur(10px);
-    }
-    .card h2{margin:0 0 10px;font-size:15px;letter-spacing:.02em;color:rgba(234,240,255,.92);}
-    .card p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
-    .bento{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;}
-    @media (max-width: 520px){ .bento{grid-template-columns:1fr} }
-    .btn{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding:14px 14px;border-radius:14px;text-decoration:none;color:var(--text);
-      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
-      border:1px solid rgba(255,255,255,.14);
-      transition: transform .15s ease, border-color .15s ease;
-      will-change:transform;
-    }
-    .btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.22);}
-    .btn:active{transform:translateY(0px) scale(.99);}
-    .btn .t{font-weight:600}
-    .btn .m{font-family:var(--mono);font-size:12px;color:var(--muted2)}
-    .arrow{opacity:.85}
-    .miniRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color:var(--muted);font-size:12px;
-    }
-    .status{margin-top:10px;color:var(--muted2);font-size:12px}
-    .err{color:#ffb4b4}
-    .foot{margin-top:16px;color:var(--muted2);font-size:12px}
-    .foot a{color:rgba(234,240,255,.82)}
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-    <div class="top">
-      <div class="brand">
-        <div class="logo"></div>
-        <div>
-          <h1>Vulnerafix</h1>
-          <div class="chip"><span class="dot"></span> Operativo</div>
-        </div>
-      </div>
-      <div class="chip" title="Stack">Cloudflare Workers + D1 · GitHub Pages</div>
-    </div>
-
-    <section class="hero">
-      <div class="kicker">Ciberseguridad · Panamá</div>
-      <div class="headline">Auditoría IT.<br>Remediación real.</div>
-      <p class="sub">Identificamos, priorizamos y cerramos las vulnerabilidades de tu infraestructura, alineadas a NIST 800-53 e ISO 27001. Sin ruido. Con evidencia.</p>
-      <div class="miniRow">
-        <span class="pill">✅ NIST 800-53</span>
-        <span class="pill">✅ ISO/IEC 27001</span>
-        <span class="pill">✅ Ley 81 Panamá</span>
-      </div>
-    </section>
-
-    <section class="grid">
-      <div class="card">
-        <h2>Accesos</h2>
-        <div id="links" class="bento">
-          <div class="btn" style="opacity:.7">
-            <div><div class="t">Cargando…</div><div class="m">/api/links</div></div>
-            <div class="arrow">→</div>
-          </div>
-        </div>
-        <div id="status" class="status"></div>
-      </div>
-
-      <div class="card">
-        <h2>Contacto directo</h2>
-        <p>Si hay urgencia, el camino es uno: directo, simple, sin fricción.</p>
-        <div style="margin-top:12px">
-          <a class="btn" href="https://wa.me/50762982064" target="_blank" rel="noreferrer">
-            <div><div class="t">WhatsApp</div><div class="m">Respuesta rápida</div></div>
-            <div class="arrow">↗</div>
-          </a>
-        </div>
-        <div class="foot">Admin: <a href="./admin.html">abrir panel</a></div>
-      </div>
-    </section>
-  </div>
-
-  <script>
-    // 👇 TU API (Worker)
-    const API_BASE = "https://lucky-bush-a6e2.aalvarez351.workers.dev";
-
-    const linksBox = document.getElementById("links");
-    const status = document.getElementById("status");
-
-    function esc(s){
-      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    }
-    function slugToHint(slug){
-      if(slug === "whatsapp") return "Contacto";
-      if(slug === "linkedin") return "Credibilidad";
-      if(slug === "servicios") return "Oferta";
-      return "Ir";
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    async function loadLinks(){
-      status.textContent = "";
-      try{
-        const r = await fetch(`${API_BASE}/api/links`, { cache: "no-store" });
-        const data = await r.json();
-        const links = data.links || [];
+    /* ── Grid background ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(0,102,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,102,255,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
 
-        if(!links.length){
-          linksBox.innerHTML = `<div class="status err">No hay links activos.</div>`;
-          return;
-        }
+    /* ── Orb blobs ── */
+    .orb {
+      position: fixed; border-radius: 50%; filter: blur(120px);
+      pointer-events: none; z-index: 0;
+    }
+    .orb-1 { width: 600px; height: 600px; background: rgba(0,102,255,.12); top: -200px; left: -200px; }
+    .orb-2 { width: 500px; height: 500px; background: rgba(0,198,255,.10); top: 30%; right: -150px; }
+    .orb-3 { width: 400px; height: 400px; background: rgba(0,230,118,.07); bottom: 10%; left: 20%; }
 
-        linksBox.innerHTML = links.map(l => `
-          <a class="btn" href="${API_BASE}/go/${encodeURIComponent(l.slug)}" target="_blank" rel="noreferrer"
-             onclick="if(typeof gtag==='function'){gtag('event','click_servicio',{event_category:'Hub',event_label:'${esc(l.slug)}'});}">
-            <div>
-              <div class="t">${esc(l.title)}</div>
-              <div class="m">${esc(slugToHint(l.slug))} · /go/${esc(l.slug)}</div>
-            </div>
-            <div class="arrow">→</div>
-          </a>
-        `).join("");
+    /* ── Typography ── */
+    h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -0.01em; }
+    h3 { font-size: 1.2rem; }
+    p { line-height: 1.65; color: var(--muted); }
+    a { color: inherit; text-decoration: none; }
 
-        status.textContent = "Actualizado desde la API.";
-      }catch(e){
-        linksBox.innerHTML = `<div class="status err">No se pudieron cargar links.</div>`;
-        status.innerHTML = `<span class="err">Error:</span> ${esc(e.message || e)}`;
+    /* ── Gradient text ── */
+    .grad { background: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .grad-g { background: linear-gradient(135deg, var(--green) 0%, var(--cyan) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* ── Layout ── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    section { padding: 100px 0; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      backdrop-filter: blur(20px);
+      background: rgba(4,9,22,.85);
+      border-bottom: 1px solid var(--stroke);
+    }
+    .nav-inner {
+      max-width: 1180px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; font-size: 1.2rem; letter-spacing: -0.02em;
+    }
+    .nav-logo .logo-icon {
+      width: 34px; height: 34px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { color: var(--muted); font-size: .9rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #000; font-weight: 700; font-size: .88rem;
+      padding: 10px 22px; border-radius: 8px; transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; }
+    @media(max-width:768px) { .nav-links { display: none; } }
+
+    /* ── HERO ── */
+    #hero {
+      padding: 160px 0 80px;
+      display: flex; align-items: center; min-height: 100vh;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    @media(max-width:900px) { .hero-grid { grid-template-columns: 1fr; } }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,198,255,.1); border: 1px solid rgba(0,198,255,.25);
+      color: var(--cyan); font-size: .82rem; font-weight: 600;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 24px;
+    }
+    .hero-badge .dot { width: 6px; height: 6px; background: var(--cyan); border-radius: 50%; animation: pulse 1.5s infinite; }
+    .hero-title { margin-bottom: 20px; }
+    .hero-desc { font-size: 1.05rem; margin-bottom: 36px; max-width: 500px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #000; font-weight: 700; font-size: .95rem;
+      padding: 14px 28px; border-radius: 10px; cursor: pointer;
+      border: none; transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 24px rgba(0,198,255,.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,198,255,.4); }
+    .btn-outline {
+      background: transparent; color: var(--text); font-weight: 600; font-size: .95rem;
+      padding: 14px 28px; border-radius: 10px; cursor: pointer;
+      border: 1px solid var(--stroke); transition: border-color .2s, background .2s;
+    }
+    .btn-outline:hover { border-color: rgba(0,198,255,.4); background: rgba(0,198,255,.06); }
+    .hero-stats { display: flex; gap: 32px; }
+    .h-stat { text-align: left; }
+    .h-stat .val { font-size: 1.6rem; font-weight: 800; }
+    .h-stat .lbl { font-size: .8rem; color: var(--muted2); }
+
+    /* ── SCANNER WIDGET ── */
+    .scanner-widget {
+      background: rgba(10,18,40,.9);
+      border: 1px solid var(--stroke);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,.5), 0 0 60px rgba(0,198,255,.08);
+    }
+    .scanner-header {
+      background: rgba(255,255,255,.03);
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--stroke);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .scanner-dots { display: flex; gap: 6px; }
+    .scanner-dots span { width: 10px; height: 10px; border-radius: 50%; }
+    .scanner-dots .d1 { background: #ff5f57; }
+    .scanner-dots .d2 { background: #febc2e; }
+    .scanner-dots .d3 { background: #28c840; }
+    .scanner-title { font-size: .82rem; color: var(--muted2); font-family: var(--mono); }
+    .scanner-body { padding: 20px; }
+    .scanner-input-row { display: flex; gap: 8px; margin-bottom: 16px; }
+    .scanner-input {
+      flex: 1; background: rgba(255,255,255,.06); border: 1px solid var(--stroke);
+      color: var(--text); font-family: var(--mono); font-size: .9rem;
+      padding: 12px 16px; border-radius: 8px; outline: none;
+      transition: border-color .2s;
+    }
+    .scanner-input:focus { border-color: var(--cyan); }
+    .scanner-input::placeholder { color: var(--muted2); }
+    .btn-scan {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #000; font-weight: 700; font-size: .9rem;
+      padding: 12px 22px; border-radius: 8px; cursor: pointer;
+      border: none; white-space: nowrap; transition: opacity .15s;
+    }
+    .btn-scan:hover { opacity: .85; }
+    .btn-scan:disabled { opacity: .5; cursor: not-allowed; }
+
+    /* Terminal output */
+    .terminal {
+      background: #020812;
+      border: 1px solid rgba(0,198,255,.15);
+      border-radius: 10px;
+      padding: 16px;
+      font-family: var(--mono);
+      font-size: .78rem;
+      min-height: 180px;
+      max-height: 220px;
+      overflow-y: auto;
+      position: relative;
+    }
+    .terminal-line { margin-bottom: 4px; line-height: 1.5; }
+    .terminal-line.ok { color: var(--green); }
+    .terminal-line.warn { color: var(--orange); }
+    .terminal-line.err { color: var(--red); }
+    .terminal-line.info { color: var(--cyan); }
+    .terminal-line.muted { color: rgba(232,240,255,.35); }
+    .terminal-cursor { display: inline-block; width: 8px; height: 14px; background: var(--cyan); animation: blink .8s step-end infinite; vertical-align: middle; }
+
+    /* Blur overlay */
+    .scan-blur-overlay {
+      position: absolute; inset: 0; border-radius: 10px;
+      backdrop-filter: blur(8px);
+      background: rgba(4,9,22,.6);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px;
+      display: none;
+    }
+    .scan-blur-overlay.active { display: flex; }
+    .overlay-lock { font-size: 2rem; }
+    .overlay-text { font-size: .88rem; color: var(--muted); text-align: center; }
+    .overlay-text strong { color: var(--text); }
+    .btn-unlock {
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      color: #000; font-weight: 700; font-size: .9rem;
+      padding: 12px 24px; border-radius: 8px; cursor: pointer;
+      border: none; transition: transform .15s;
+    }
+    .btn-unlock:hover { transform: translateY(-2px); }
+
+    /* Scan progress */
+    .scan-progress { margin-top: 12px; display: none; }
+    .scan-progress.active { display: block; }
+    .progress-bar { height: 4px; background: rgba(255,255,255,.1); border-radius: 2px; overflow: hidden; }
+    .progress-fill {
+      height: 100%; background: linear-gradient(90deg, var(--cyan), var(--blue));
+      border-radius: 2px; transition: width .3s;
+    }
+    .progress-label { font-size: .75rem; color: var(--muted2); margin-top: 6px; font-family: var(--mono); }
+
+    /* ── HOW IT WORKS ── */
+    #how { background: linear-gradient(180deg, transparent, rgba(0,102,255,.04), transparent); }
+    .section-label {
+      display: inline-block; color: var(--cyan); font-size: .8rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .section-title { margin-bottom: 16px; }
+    .section-sub { color: var(--muted); font-size: 1rem; max-width: 560px; margin: 0 auto 56px; text-align: center; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+    @media(max-width:768px) { .steps-grid { grid-template-columns: 1fr; } }
+    .step-card {
+      background: var(--card); border: 1px solid var(--stroke);
+      border-radius: 16px; padding: 32px; position: relative;
+      transition: border-color .3s, transform .3s;
+    }
+    .step-card:hover { border-color: rgba(0,198,255,.3); transform: translateY(-4px); }
+    .step-num {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, rgba(0,198,255,.15), rgba(0,102,255,.15));
+      border: 1px solid rgba(0,198,255,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: 800; color: var(--cyan);
+      margin-bottom: 20px;
+    }
+    .step-card h3 { margin-bottom: 10px; }
+    .step-arrow { display: none; }
+    @media(min-width:769px) {
+      .step-card:not(:last-child)::after {
+        content: '→'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%);
+        color: var(--cyan); font-size: 1.4rem; z-index: 1;
       }
     }
 
-    loadLinks();
-  </script>
+    /* ── WHAT WE SCAN ── */
+    .scan-targets-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    @media(max-width:900px) { .scan-targets-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:480px) { .scan-targets-grid { grid-template-columns: 1fr; } }
+    .target-card {
+      background: var(--card); border: 1px solid var(--stroke);
+      border-radius: 14px; padding: 24px; text-align: center;
+      transition: border-color .2s, background .2s;
+    }
+    .target-card:hover { border-color: rgba(0,198,255,.3); background: var(--card-h); }
+    .target-icon { font-size: 2rem; margin-bottom: 12px; }
+    .target-card h3 { font-size: 1rem; margin-bottom: 6px; }
+    .target-card p { font-size: .82rem; }
+
+    /* ── FEATURES ── */
+    #features { background: linear-gradient(180deg, transparent, rgba(0,198,255,.03), transparent); }
+    .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    @media(max-width:900px) { .features-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:560px) { .features-grid { grid-template-columns: 1fr; } }
+    .feature-card {
+      background: var(--card); border: 1px solid var(--stroke);
+      border-radius: 16px; padding: 28px;
+      transition: border-color .2s, transform .2s;
+    }
+    .feature-card:hover { border-color: rgba(0,198,255,.25); transform: translateY(-3px); }
+    .feature-icon {
+      width: 48px; height: 48px; border-radius: 12px; margin-bottom: 18px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+    }
+    .fi-cyan { background: rgba(0,198,255,.12); border: 1px solid rgba(0,198,255,.2); }
+    .fi-blue { background: rgba(0,102,255,.12); border: 1px solid rgba(0,102,255,.2); }
+    .fi-green { background: rgba(0,230,118,.12); border: 1px solid rgba(0,230,118,.2); }
+    .fi-orange { background: rgba(255,145,0,.12); border: 1px solid rgba(255,145,0,.2); }
+    .fi-red { background: rgba(255,68,68,.12); border: 1px solid rgba(255,68,68,.2); }
+    .feature-card h3 { margin-bottom: 8px; }
+
+    /* ── REPORT PREVIEW ── */
+    #report { padding: 100px 0; }
+    .report-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    @media(max-width:900px) { .report-grid { grid-template-columns: 1fr; } }
+    .report-preview {
+      background: rgba(10,18,40,.95);
+      border: 1px solid var(--stroke); border-radius: 20px; overflow: hidden;
+      box-shadow: 0 32px 100px rgba(0,0,0,.5), 0 0 80px rgba(0,198,255,.06);
+    }
+    .rp-header { background: rgba(0,198,255,.08); border-bottom: 1px solid var(--stroke); padding: 16px 20px; display: flex; align-items: center; gap: 10px; }
+    .rp-logo { font-weight: 800; font-size: .9rem; color: var(--cyan); }
+    .rp-badge { background: rgba(255,68,68,.2); color: var(--red); font-size: .72rem; font-weight: 700; padding: 3px 8px; border-radius: 100px; margin-left: auto; }
+    .rp-body { padding: 20px; }
+    .rp-target { font-family: var(--mono); font-size: .85rem; color: var(--muted2); margin-bottom: 16px; }
+    .vuln-item { display: flex; align-items: flex-start; gap: 10px; padding: 12px; border-radius: 10px; margin-bottom: 8px; background: rgba(255,255,255,.03); border: 1px solid transparent; }
+    .vuln-item.critical { border-color: rgba(255,68,68,.2); }
+    .vuln-item.high { border-color: rgba(255,145,0,.2); }
+    .vuln-item.medium { border-color: rgba(255,206,86,.2); }
+    .vuln-sev { font-size: .7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; white-space: nowrap; margin-top: 2px; }
+    .sev-critical { background: rgba(255,68,68,.2); color: var(--red); }
+    .sev-high { background: rgba(255,145,0,.2); color: var(--orange); }
+    .sev-medium { background: rgba(255,206,86,.2); color: #ffce56; }
+    .sev-low { background: rgba(0,230,118,.2); color: var(--green); }
+    .vuln-info { flex: 1; }
+    .vuln-name { font-size: .88rem; font-weight: 600; margin-bottom: 3px; }
+    .vuln-desc { font-size: .78rem; color: var(--muted2); }
+    .cvss-bar { margin-top: 16px; }
+    .cvss-label { display: flex; justify-content: space-between; font-size: .78rem; color: var(--muted2); margin-bottom: 6px; }
+    .cvss-track { height: 8px; background: rgba(255,255,255,.08); border-radius: 4px; overflow: hidden; }
+    .cvss-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--green), var(--orange), var(--red)); }
+
+    /* ── PRICING ── */
+    #pricing { background: linear-gradient(180deg, transparent, rgba(0,102,255,.04), transparent); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    @media(max-width:900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
+    .price-card {
+      background: var(--card); border: 1px solid var(--stroke);
+      border-radius: 20px; padding: 36px 28px;
+      position: relative; transition: transform .2s, border-color .2s;
+    }
+    .price-card:hover { transform: translateY(-6px); }
+    .price-card.featured {
+      border-color: rgba(0,198,255,.35);
+      background: linear-gradient(135deg, rgba(0,198,255,.06), rgba(0,102,255,.08));
+      box-shadow: 0 0 60px rgba(0,198,255,.1);
+    }
+    .price-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #000; font-size: .72rem; font-weight: 800;
+      padding: 4px 14px; border-radius: 100px; white-space: nowrap;
+    }
+    .price-plan { font-size: .78rem; font-weight: 700; color: var(--cyan); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 10px; }
+    .price-name { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
+    .price-desc { font-size: .85rem; color: var(--muted); margin-bottom: 24px; min-height: 48px; }
+    .price-amount { display: flex; align-items: flex-end; gap: 6px; margin-bottom: 6px; }
+    .price-usd { font-size: 2.6rem; font-weight: 800; line-height: 1; }
+    .price-curr { font-size: .9rem; color: var(--cyan); font-weight: 700; margin-bottom: 6px; }
+    .price-per { font-size: .82rem; color: var(--muted2); margin-bottom: 28px; }
+    .price-features { list-style: none; margin-bottom: 32px; }
+    .price-features li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: .88rem; color: var(--muted); }
+    .price-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .price-features li.no::before { content: '✗'; color: var(--muted2); }
+    .price-features li.no { color: var(--muted2); }
+    .btn-buy {
+      width: 100%; padding: 14px; border-radius: 10px;
+      font-weight: 700; font-size: .95rem; cursor: pointer; border: none;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-buy-primary {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #000; box-shadow: 0 4px 24px rgba(0,198,255,.3);
+    }
+    .btn-buy-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,198,255,.4); }
+    .btn-buy-outline { background: transparent; color: var(--text); border: 1px solid var(--stroke); }
+    .btn-buy-outline:hover { border-color: rgba(0,198,255,.3); background: rgba(0,198,255,.05); }
+
+    /* ── TRUST SECTION ── */
+    #trust { padding: 60px 0; }
+    .trust-row { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+    .trust-badge { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .trust-icon { font-size: 2rem; }
+    .trust-label { font-size: .78rem; color: var(--muted2); text-align: center; max-width: 100px; }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: linear-gradient(180deg, transparent, rgba(0,198,255,.03), transparent); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    @media(max-width:900px) { .testi-grid { grid-template-columns: 1fr; } }
+    .testi-card {
+      background: var(--card); border: 1px solid var(--stroke); border-radius: 16px; padding: 28px;
+    }
+    .testi-stars { color: #ffd700; margin-bottom: 14px; letter-spacing: 2px; }
+    .testi-text { font-size: .9rem; color: var(--muted); margin-bottom: 18px; font-style: italic; line-height: 1.7; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--cyan), var(--blue)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .9rem; color: #000; }
+    .testi-name { font-size: .88rem; font-weight: 600; }
+    .testi-role { font-size: .78rem; color: var(--muted2); }
+
+    /* ── FAQ ── */
+    #faq { padding: 100px 0; }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--stroke); }
+    .faq-question {
+      width: 100%; background: none; border: none; color: var(--text);
+      text-align: left; padding: 22px 0; font-size: .98rem; font-weight: 600;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      font-family: var(--sans); transition: color .2s;
+    }
+    .faq-question:hover { color: var(--cyan); }
+    .faq-arrow { font-size: 1.2rem; transition: transform .3s; flex-shrink: 0; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-item.open .faq-answer { max-height: 200px; }
+    .faq-answer p { padding: 0 0 20px; font-size: .9rem; }
+
+    /* ── CTA ── */
+    #cta { padding: 100px 0; text-align: center; }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(0,102,255,.12), rgba(0,198,255,.08));
+      border: 1px solid rgba(0,198,255,.2); border-radius: 28px; padding: 72px 48px;
+      max-width: 760px; margin: 0 auto; position: relative; overflow: hidden;
+    }
+    .cta-box::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(0,198,255,.1) 0%, transparent 70%); }
+    .cta-box h2 { margin-bottom: 16px; position: relative; z-index: 1; }
+    .cta-box p { margin-bottom: 36px; position: relative; z-index: 1; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--stroke); padding: 48px 0 32px;
+      background: rgba(4,9,22,.95);
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+    @media(max-width:900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:560px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand .brand-name { font-weight: 800; font-size: 1.1rem; margin-bottom: 10px; }
+    .footer-brand p { font-size: .85rem; max-width: 260px; }
+    .footer-col h4 { font-size: .82rem; font-weight: 700; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { font-size: .88rem; color: var(--muted); transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--text); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--stroke); padding-top: 24px; }
+    .footer-bottom p { font-size: .8rem; color: var(--muted2); }
+    .footer-badges { display: flex; gap: 12px; }
+    .footer-badge { font-size: .72rem; color: var(--muted2); background: rgba(255,255,255,.04); border: 1px solid var(--stroke); padding: 4px 10px; border-radius: 6px; }
+
+    /* ── MODAL ── */
+    .modal-backdrop {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(4,9,22,.85); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center; padding: 24px;
+      display: none;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      background: var(--bg1); border: 1px solid var(--stroke);
+      border-radius: 24px; width: 100%; max-width: 520px;
+      max-height: 90vh; overflow-y: auto;
+      box-shadow: 0 40px 120px rgba(0,0,0,.6);
+      animation: slideUp .3s ease;
+    }
+    .modal-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--stroke); display: flex; align-items: center; justify-content: space-between; }
+    .modal-header h3 { font-size: 1.1rem; }
+    .modal-close { background: none; border: none; color: var(--muted2); cursor: pointer; font-size: 1.4rem; line-height: 1; transition: color .2s; }
+    .modal-close:hover { color: var(--text); }
+    .modal-body { padding: 28px; }
+
+    /* Steps */
+    .step-tabs { display: flex; gap: 6px; margin-bottom: 28px; }
+    .step-tab {
+      flex: 1; padding: 8px; border-radius: 8px; text-align: center;
+      font-size: .78rem; font-weight: 600; color: var(--muted2);
+      background: rgba(255,255,255,.04); border: 1px solid transparent;
+      transition: all .2s;
+    }
+    .step-tab.active { background: rgba(0,198,255,.12); border-color: rgba(0,198,255,.25); color: var(--cyan); }
+    .step-tab.done { color: var(--green); }
+
+    /* Form elements */
+    .form-label { font-size: .82rem; font-weight: 600; margin-bottom: 8px; color: var(--muted); }
+    .form-input, .form-select {
+      width: 100%; background: rgba(255,255,255,.05); border: 1px solid var(--stroke);
+      color: var(--text); font-family: var(--sans); font-size: .9rem;
+      padding: 12px 16px; border-radius: 10px; outline: none; margin-bottom: 16px;
+      transition: border-color .2s;
+    }
+    .form-input:focus, .form-select:focus { border-color: var(--cyan); }
+    .form-select option { background: var(--bg1); }
+    .plan-pills { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .plan-pill {
+      flex: 1; min-width: 120px; padding: 12px; border-radius: 10px; text-align: center;
+      background: rgba(255,255,255,.04); border: 2px solid var(--stroke);
+      cursor: pointer; transition: all .2s;
+    }
+    .plan-pill.selected { border-color: var(--cyan); background: rgba(0,198,255,.08); }
+    .plan-pill .pill-name { font-weight: 700; font-size: .9rem; }
+    .plan-pill .pill-price { font-size: .8rem; color: var(--cyan); margin-top: 2px; }
+
+    /* Payment step */
+    .wallet-box {
+      background: rgba(0,198,255,.06); border: 1px solid rgba(0,198,255,.2);
+      border-radius: 12px; padding: 16px; margin-bottom: 16px;
+    }
+    .wallet-label { font-size: .75rem; color: var(--cyan); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+    .wallet-addr { font-family: var(--mono); font-size: .78rem; color: var(--text); word-break: break-all; }
+    .wallet-copy { display: inline-block; margin-top: 8px; cursor: pointer; font-size: .75rem; color: var(--cyan); font-weight: 600; }
+    .wallet-copy:hover { text-decoration: underline; }
+    .amount-display { text-align: center; padding: 20px; }
+    .amount-big { font-size: 2.2rem; font-weight: 800; color: var(--green); }
+    .amount-curr { font-size: 1rem; color: var(--cyan); font-weight: 700; }
+    .amount-note { font-size: .78rem; color: var(--muted2); margin-top: 6px; }
+    .qr-placeholder { width: 140px; height: 140px; background: #fff; border-radius: 10px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #000; font-size: .7rem; font-weight: 700; text-align: center; padding: 8px; }
+    .network-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+    .net-tab { flex: 1; padding: 10px; border-radius: 8px; text-align: center; font-size: .82rem; font-weight: 600; cursor: pointer; border: 1px solid var(--stroke); background: rgba(255,255,255,.03); color: var(--muted2); transition: all .2s; }
+    .net-tab.active { border-color: var(--cyan); background: rgba(0,198,255,.1); color: var(--cyan); }
+
+    /* Status polling */
+    .poll-status { text-align: center; padding: 20px 0; }
+    .poll-spinner { width: 48px; height: 48px; border: 3px solid rgba(0,198,255,.2); border-top-color: var(--cyan); border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 16px; }
+    .poll-msg { font-size: .9rem; color: var(--muted); }
+    .poll-timer { font-family: var(--mono); font-size: 1.2rem; color: var(--cyan); margin-top: 8px; font-weight: 700; }
+
+    /* Success */
+    .success-box { text-align: center; padding: 20px 0; }
+    .success-icon { font-size: 3rem; margin-bottom: 16px; }
+    .success-title { font-size: 1.3rem; font-weight: 800; color: var(--green); margin-bottom: 10px; }
+    .success-msg { font-size: .9rem; color: var(--muted); margin-bottom: 24px; }
+    .btn-full { width: 100%; }
+    .modal-divider { height: 1px; background: var(--stroke); margin: 16px 0; }
+
+    /* ── REVEAL ANIMATION ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── KEYFRAMES ── */
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* ── AUDITOR SECTION ── */
+    #auditor { padding: 72px 0 40px; }
+    .auditor-card {
+      display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: start;
+      background: linear-gradient(135deg, rgba(0,102,255,.06), rgba(0,198,255,.04));
+      border: 1px solid rgba(0,198,255,.2); border-radius: 24px; padding: 48px;
+    }
+    @media(max-width:768px) { .auditor-card { grid-template-columns: 1fr; gap: 24px; padding: 28px; } }
+    .auditor-avatar {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; font-weight: 800; color: #000; flex-shrink: 0;
+    }
+    .auditor-name { font-size: 1.45rem; font-weight: 800; margin-bottom: 4px; }
+    .auditor-role { color: var(--cyan); font-size: .88rem; margin-bottom: 16px; }
+    .cert-badges { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; }
+    .cert-badge { background: rgba(0,198,255,.1); border: 1px solid rgba(0,198,255,.25); color: var(--cyan); font-size: .7rem; font-weight: 700; padding: 3px 10px; border-radius: 6px; letter-spacing: .04em; }
+    .auditor-headline { font-size: 1.1rem; font-weight: 700; margin-bottom: 14px; color: var(--text); }
+    .auditor-bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .auditor-bullets li { display: flex; align-items: flex-start; gap: 10px; font-size: .88rem; color: var(--muted); }
+    .auditor-bullets li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+    /* ── AUDIT PRO BLOCK ── */
+    .audit-pro-block { background: linear-gradient(135deg, rgba(0,198,255,.08), rgba(0,102,255,.1)); border: 2px solid rgba(0,198,255,.35); border-radius: 20px; padding: 40px; margin-bottom: 40px; position: relative; box-shadow: 0 0 60px rgba(0,198,255,.08); }
+    .audit-pro-inner { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+    @media(max-width:768px) { .audit-pro-inner { grid-template-columns: 1fr; } }
+    .audit-pro-badge { position: absolute; top: -13px; left: 32px; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: #000; font-size: .72rem; font-weight: 800; padding: 4px 16px; border-radius: 100px; white-space: nowrap; }
+    .audit-pro-price { text-align: center; min-width: 160px; }
+    .audit-pro-amount { font-size: 3rem; font-weight: 800; color: var(--cyan); line-height: 1; }
+    .audit-pro-per { font-size: .8rem; color: var(--muted2); margin-top: 4px; }
+    .btn-audit { margin-top: 16px; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: #000; font-weight: 700; font-size: .95rem; padding: 13px 28px; border-radius: 10px; cursor: pointer; border: none; transition: transform .15s, box-shadow .15s; white-space: nowrap; box-shadow: 0 4px 24px rgba(0,198,255,.3); display: block; width: 100%; }
+    .btn-audit:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,198,255,.4); }
+    .audit-features { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .audit-features li { display: flex; align-items: flex-start; gap: 8px; font-size: .88rem; color: var(--muted); }
+    .audit-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+    /* ── GUARANTEE CARDS ── */
+    .guarantee-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+    @media(max-width:768px) { .guarantee-grid { grid-template-columns: 1fr; } }
+    .guarantee-card { background: var(--card); border: 1px solid var(--stroke); border-radius: 16px; padding: 28px; text-align: center; }
+    .guarantee-icon { font-size: 2rem; margin-bottom: 12px; }
+    .guarantee-card h4 { font-size: 1rem; margin-bottom: 8px; }
+
+    /* ── PAYMENT TABS (modal) ── */
+    .pay-method-tabs { display: flex; gap: 6px; margin-bottom: 20px; }
+    .pay-method-tab { flex: 1; padding: 10px 6px; border-radius: 8px; text-align: center; font-size: .8rem; font-weight: 600; cursor: pointer; border: 1px solid var(--stroke); background: rgba(255,255,255,.03); color: var(--muted2); transition: all .2s; }
+    .pay-method-tab.active { border-color: var(--cyan); background: rgba(0,198,255,.1); color: var(--cyan); }
+    .pay-method-content { display: none; }
+    .pay-method-content.active { display: block; }
+    .yappy-number-box { background: rgba(0,230,118,.08); border: 1px solid rgba(0,230,118,.25); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 16px; cursor: pointer; transition: background .2s; }
+    .yappy-number-box:hover { background: rgba(0,230,118,.14); }
+    .yappy-number { font-size: 2rem; font-weight: 800; color: var(--green); letter-spacing: .06em; }
+    .yappy-copy-hint { font-size: .74rem; color: var(--muted2); margin-top: 4px; }
+    .yappy-steps { list-style: none; counter-reset: ys; margin-bottom: 20px; }
+    .yappy-steps li { counter-increment: ys; display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.05); font-size: .87rem; color: var(--muted); }
+    .yappy-steps li:last-child { border-bottom: none; }
+    .yappy-steps li::before { content: counter(ys); flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: rgba(0,230,118,.15); border: 1px solid rgba(0,230,118,.3); color: var(--green); font-weight: 700; font-size: .78rem; display: flex; align-items: center; justify-content: center; }
+    .btn-yappy-confirm { width: 100%; padding: 14px; border-radius: 10px; background: linear-gradient(135deg,#00c853,#00e676); color: #000; font-weight: 700; font-size: .95rem; cursor: pointer; border: none; transition: transform .15s; text-decoration: none; display: block; text-align: center; }
+    .btn-yappy-confirm:hover { transform: translateY(-2px); }
+    .auth-checkbox-row { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; padding: 12px; background: rgba(255,145,0,.06); border: 1px solid rgba(255,145,0,.2); border-radius: 8px; }
+    .auth-checkbox-row input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--cyan); flex-shrink: 0; margin-top: 2px; cursor: pointer; }
+    .auth-checkbox-row label { font-size: .84rem; color: var(--muted); cursor: pointer; line-height: 1.4; }
+    .hero-payment-line { font-size: .82rem; color: var(--muted2); margin-bottom: 16px; }
+    @media(prefers-reduced-motion:reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+    /* ── MISC ── */
+    .text-center { text-align: center; }
+    .mb-4 { margin-bottom: 4px; }
+    .mb-8 { margin-bottom: 8px; }
+    .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; }
+    .mt-8 { margin-top: 8px; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .gap-8 { gap: 8px; }
+    .subdomains-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .subdomain-chip { background: rgba(255,255,255,.04); border: 1px solid var(--stroke); border-radius: 8px; padding: 8px 14px; font-size: .8rem; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+    .subdomain-chip .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+    .alert-box { background: rgba(255,145,0,.08); border: 1px solid rgba(255,145,0,.2); border-radius: 10px; padding: 12px 16px; font-size: .85rem; color: var(--orange); display: flex; align-items: flex-start; gap: 8px; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "VulneraFix ATAPAudit",
+  "description": "Plataforma SaaS de auditoría de ciberseguridad. Gestión de vulnerabilidades, cumplimiento ISO 27001, NIST 800-53 y remediación automatizada con inteligencia artificial.",
+  "url": "https://vulnerafix.com",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type":"AggregateOffer","lowPrice":"0","highPrice":"500","priceCurrency":"USD"},
+  "provider": {"@type":"Organization","name":"ATAPAudit by Agentesia","url":"https://vulnerafix.com"},
+  "featureList": ["Vulnerability scanning","ISO 27001 compliance","NIST 800-53 mapping","OWASP Top 10 auditing","AI-powered remediation","Risk scoring dashboard","CSAF 2.0 export"]
+}
+</script>
+  <meta property="og:image" content="https://vulnerafix.com/og.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+</head>
+<body>
+
+<!-- Orbs -->
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="logo-icon">🛡</div>
+      VulneraFix
+    </a>
+    <div class="nav-links">
+      <a href="#how">Cómo funciona</a>
+      <a href="#features">Funciones</a>
+      <a href="#pricing">Precios</a>
+      <a href="https://admin.vulnerafix.com" target="_blank">Admin</a>
+      <a href="https://api.vulnerafix.com/health" target="_blank">API Status</a>
+    </div>
+    <a href="#pricing" class="nav-cta">Escanear ahora →</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Left -->
+      <div>
+        <div class="hero-badge"><span class="dot"></span> Scanner online activo · 24/7</div>
+        <h1 class="hero-title">
+          Detecta<br>
+          <span class="grad">vulnerabilidades reales</span><br>
+          antes que los hackers
+        </h1>
+        <p class="hero-desc">
+          Escanea tu IP o dominio en segundos. Más de 50 vectores de ataque, reporte PDF profesional alineado a NIST 800-53 y OWASP Top 10. Firmado por un especialista — no por un bot.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('scanner-target').focus(); document.querySelector('.scanner-widget').scrollIntoView({behavior:'smooth'})">
+            🔍 Escanear gratis ahora
+          </button>
+          <a href="#pricing" class="btn-outline">Ver planes →</a>
+        </div>
+        <p class="hero-payment-line">Paga con <strong>Yappy 🇵🇦</strong> · Tarjeta (PayPal) · USDT — <strong>factura disponible para empresas</strong></p>
+        <a href="https://wa.me/50762982064?text=Hola%2C%20quiero%20hablar%20con%20el%20auditor%20de%20VulneraFix" target="_blank" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;margin-bottom:32px">💬 Hablar con el auditor</a>
+        <div class="hero-stats">
+          <div class="h-stat"><div class="val grad">50+</div><div class="lbl">Vectores analizados</div></div>
+          <div class="h-stat"><div class="val grad">5min</div><div class="lbl">Reporte listo</div></div>
+          <div class="h-stat"><div class="val grad">99%</div><div class="lbl">Precisión CVSS v3.1</div></div>
+        </div>
+      </div>
+
+      <!-- Scanner Widget -->
+      <div>
+        <div class="scanner-widget">
+          <div class="scanner-header">
+            <div class="scanner-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+            <span class="scanner-title">vulnerafix-scanner v2.0 · live</span>
+          </div>
+          <div class="scanner-body">
+            <div class="scanner-input-row">
+              <input id="scanner-target" class="scanner-input" type="text" placeholder="IP o dominio — ej. 192.168.1.1 / miempresa.com" />
+              <button class="btn-scan" id="btn-run-scan" onclick="runTeaser()">Scan</button>
+            </div>
+            <div style="position:relative">
+              <div class="terminal" id="terminal-output">
+                <div class="terminal-line muted">// Ingresa una IP o dominio y presiona Scan</div>
+                <div class="terminal-line muted">// El análisis de preview es gratuito</div>
+                <div class="terminal-line muted">// Desbloquea el reporte completo desde $9 USDT</div>
+              </div>
+              <div class="scan-blur-overlay" id="scan-overlay">
+                <div class="overlay-lock">🔒</div>
+                <div class="overlay-text">
+                  <strong>3 vulnerabilidades detectadas</strong><br>
+                  Desbloquea el reporte completo
+                </div>
+                <button class="btn-unlock" onclick="openPayModal()">Ver reporte · desde $9 USDT</button>
+              </div>
+            </div>
+            <div class="scan-progress" id="scan-progress">
+              <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+              <div class="progress-label" id="progress-label">Iniciando scanner...</div>
+            </div>
+          </div>
+        </div>
+        <!-- Subdomains -->
+        <div class="subdomains-row">
+          <div class="subdomain-chip"><span class="chip-dot"></span> vulnerafix.com</div>
+          <div class="subdomain-chip"><span class="chip-dot"></span> api.vulnerafix.com</div>
+          <div class="subdomain-chip"><span class="chip-dot"></span> admin.vulnerafix.com</div>
+          <div class="subdomain-chip"><span class="chip-dot"></span> reports.vulnerafix.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUIÉN AUDITA ── -->
+<section id="auditor">
+  <div class="container">
+    <div class="auditor-card reveal">
+      <div class="auditor-avatar">AA</div>
+      <div>
+        <div class="auditor-name">Ing. Andrey Álvarez</div>
+        <div class="auditor-role">Fundador &amp; Auditor Principal · VulneraFix / ATAPAudit</div>
+        <div class="cert-badges">
+          <span class="cert-badge">OSCP</span>
+          <span class="cert-badge">CHFI</span>
+          <span class="cert-badge">ISO 27001 Auditor</span>
+          <span class="cert-badge">MCSE</span>
+          <span class="cert-badge">CNDP</span>
+        </div>
+        <div class="auditor-headline">Tu reporte no lo firma un bot. Lo firma un especialista en riesgo bancario.</div>
+        <ul class="auditor-bullets">
+          <li>20+ años en tecnología y banca</li>
+          <li>Maestría en Gerencia y TI · Ingeniería en Informática</li>
+          <li>Metodología bancaria real: CIS L2, Nessus/Tenable, NIST SP 800-53, ISO 27001:2022</li>
+          <li>Cada hallazgo incluye remediación con comandos específicos y prioridad de acción</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section id="how">
+  <div class="container text-center">
+    <div class="section-label">Proceso</div>
+    <h2 class="section-title">De scan a reporte en <span class="grad">3 pasos</span></h2>
+    <p class="section-sub">Sin instalaciones, sin configuración. Solo tu IP o dominio y recibes un reporte profesional.</p>
+    <div class="steps-grid reveal">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Ingresa tu objetivo</h3>
+        <p>IP pública, dominio o subdominio. Validamos que tengas autorización antes de escanear.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Elige tu método de pago</h3>
+        <p>Yappy 🇵🇦, tarjeta (PayPal) o USDT. Confirmación en minutos. Factura disponible para empresas.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Recibe tu reporte PDF</h3>
+        <p>Hallazgos con CVSS v3.1, prioridad, pasos de remediación y alineación a NIST 800-53.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT WE SCAN ── -->
+<section id="targets" style="padding:100px 0">
+  <div class="container">
+    <div class="text-center mb-24">
+      <div class="section-label">Cobertura</div>
+      <h2 class="section-title">Lo que <span class="grad">escaneamos</span></h2>
+      <p class="section-sub">Análisis multicapa contra los vectores de ataque más explotados en LATAM.</p>
+    </div>
+    <div class="scan-targets-grid reveal">
+      <div class="target-card"><div class="target-icon">🌐</div><h3>Puertos & Servicios</h3><p>Nmap-style — 1000+ puertos, banners, protocolos</p></div>
+      <div class="target-card"><div class="target-icon">🔐</div><h3>SSL/TLS</h3><p>Certificados, cipher suites, HSTS, downgrade attacks</p></div>
+      <div class="target-card"><div class="target-icon">🕸</div><h3>Web App (OWASP)</h3><p>XSS, SQLi, IDOR, open redirect, headers de seguridad</p></div>
+      <div class="target-card"><div class="target-icon">📡</div><h3>DNS & Subdominios</h3><p>Subdomain takeover, zone transfer, DNSSEC, SPF/DMARC</p></div>
+      <div class="target-card"><div class="target-icon">📁</div><h3>Archivos Expuestos</h3><p>.env, .git, backups, configs, credenciales visibles</p></div>
+      <div class="target-card"><div class="target-icon">⚙️</div><h3>CVEs Conocidos</h3><p>NVD + NIST — vulnerabilidades en versiones de software</p></div>
+      <div class="target-card"><div class="target-icon">🔥</div><h3>Firewall & WAF</h3><p>Detección de WAF, bypass, exposición de admin panels</p></div>
+      <div class="target-card"><div class="target-icon">📧</div><h3>Email Security</h3><p>SPF, DKIM, DMARC, phishing risk score</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section id="features">
+  <div class="container">
+    <div class="text-center mb-24">
+      <div class="section-label">Capacidades</div>
+      <h2 class="section-title">Tecnología de <span class="grad">nivel enterprise</span></h2>
+      <p class="section-sub">Las mismas herramientas que usan los equipos red team — ahora accesibles para tu empresa.</p>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon fi-cyan">🎯</div>
+        <h3>CVSS v3.1 Automático</h3>
+        <p>Cada hallazgo recibe su score de riesgo calculado con el estándar CVSS v3.1 oficial. Base, temporal y ambiental.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">📋</div>
+        <h3>Reporte PDF Profesional</h3>
+        <p>Reporte ejecutivo + técnico. Listo para presentar a directivos, equipos de TI o para auditorías regulatorias.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-green">✅</div>
+        <h3>Cumplimiento Normativo</h3>
+        <p>Mapeo automático a NIST 800-53, OWASP Top 10 e ISO 27001. Identifica qué controles están fallando.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-orange">⚡</div>
+        <h3>Remediación Guiada</h3>
+        <p>Cada vuln incluye pasos concretos de remediación, comandos, configuraciones y referencias técnicas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-red">🔔</div>
+        <h3>Monitoreo 24/7</h3>
+        <p>Plan MonitorPro: alertas en tiempo real cuando aparece una nueva vulnerabilidad en tu infraestructura.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-cyan">🔗</div>
+        <h3>API para Developers</h3>
+        <p>Integra el scanner en tu pipeline CI/CD. Detén deployments si se detectan vulns críticas automáticamente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REPORT PREVIEW ── -->
+<section id="report">
+  <div class="container">
+    <div class="report-grid">
+      <!-- Preview card -->
+      <div class="report-preview reveal">
+        <div class="rp-header">
+          <div class="rp-logo">🛡 VulneraFix Report</div>
+          <div class="rp-badge">3 CRÍTICAS</div>
+        </div>
+        <div class="rp-body">
+          <div class="rp-target">Target: 203.0.113.42 · Scan: 2026-03-23 · 52 checks</div>
+          <div class="vuln-item critical">
+            <div class="vuln-sev sev-critical">CRITICAL</div>
+            <div class="vuln-info">
+              <div class="vuln-name">RCE via Apache 2.4.49 Path Traversal</div>
+              <div class="vuln-desc">CVE-2021-41773 · CVSS 9.8 · Puerto 80/443 expuesto</div>
+            </div>
+          </div>
+          <div class="vuln-item high">
+            <div class="vuln-sev sev-high">HIGH</div>
+            <div class="vuln-info">
+              <div class="vuln-name">SSL/TLS Downgrade · TLSv1.0 habilitado</div>
+              <div class="vuln-desc">POODLE/BEAST posibles · CVSS 7.4</div>
+            </div>
+          </div>
+          <div class="vuln-item medium">
+            <div class="vuln-sev sev-medium">MEDIUM</div>
+            <div class="vuln-info">
+              <div class="vuln-name">.env file expuesto en raíz web</div>
+              <div class="vuln-desc">DB credentials, API keys visibles · CVSS 6.5</div>
+            </div>
+          </div>
+          <div class="cvss-bar">
+            <div class="cvss-label"><span>Risk Score general</span><span style="color:var(--red);font-weight:700">8.6 / 10</span></div>
+            <div class="cvss-track"><div class="cvss-fill" style="width:86%"></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Text -->
+      <div class="reveal">
+        <div class="section-label">Reporte</div>
+        <h2 class="section-title">Un reporte que <span class="grad">tus devs y tu CEO</span> pueden leer</h2>
+        <p style="margin-bottom:24px">Dos vistas en un mismo PDF: resumen ejecutivo con riesgo de negocio para dirección, y detalles técnicos con PoC, código de remediación y referencias CVE para tu equipo de ingeniería.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+          <li class="flex items-center gap-8"><span style="color:var(--green);font-size:1.2rem">✓</span> Reporte ejecutivo + técnico en 1 PDF</li>
+          <li class="flex items-center gap-8"><span style="color:var(--green);font-size:1.2rem">✓</span> CVSS v3.1 con scoring base, temporal y ambiental</li>
+          <li class="flex items-center gap-8"><span style="color:var(--green);font-size:1.2rem">✓</span> Mapeo a NIST 800-53 e ISO 27001</li>
+          <li class="flex items-center gap-8"><span style="color:var(--green);font-size:1.2rem">✓</span> Comandos de remediación listos para copiar</li>
+          <li class="flex items-center gap-8"><span style="color:var(--green);font-size:1.2rem">✓</span> Descarga como PDF o accede vía API</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section id="pricing">
+  <div class="container">
+    <div class="text-center mb-24">
+      <div class="section-label">Planes</div>
+      <h2 class="section-title">Precios claros · <span class="grad">Sin letra chica</span></h2>
+      <p class="section-sub">Paga con Yappy, tarjeta o USDT. Factura disponible para ProScan, Auditoría y MonitorPro.</p>
+    </div>
+    <!-- AUDITORÍA PROFESIONAL -->
+    <div class="audit-pro-block reveal">
+      <div class="audit-pro-badge">⭐ RECOMENDADO PARA EMPRESAS</div>
+      <div class="audit-pro-inner">
+        <div>
+          <div class="price-plan">Auditoría Profesional</div>
+          <h3 style="font-size:1.5rem;margin-bottom:12px">Auditoría Profesional Completa</h3>
+          <ul class="audit-features">
+            <li>Scan de hasta 5 activos (IPs, dominios, subdominos)</li>
+            <li>Validación manual de hallazgos por el auditor</li>
+            <li>Reporte ejecutivo + técnico mapeado a NIST 800-53 e ISO 27001:2022</li>
+            <li>Sesión de remediación 1:1 de 60 min por videollamada</li>
+            <li>Re-scan de verificación a 15 días</li>
+            <li>Carta de cumplimiento para clientes / dirección</li>
+          </ul>
+        </div>
+        <div class="audit-pro-price">
+          <div class="audit-pro-amount">$490</div>
+          <div class="audit-pro-per">pago único · entrega 5 días hábiles</div>
+          <button class="btn-audit" onclick="openPayModal('auditoria')">Contratar Auditoría →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-grid reveal">
+
+      <!-- QuickScan $9 -->
+      <div class="price-card">
+        <div class="price-plan">Básico</div>
+        <div class="price-name">QuickScan</div>
+        <div class="price-desc">Análisis rápido para verificar la exposición de un activo individual.</div>
+        <div class="price-amount">
+          <div class="price-usd">$9</div>
+          <div class="price-curr">USDT</div>
+        </div>
+        <div class="price-per">pago único · 1 escaneo</div>
+        <ul class="price-features">
+          <li>1 IP o dominio</li>
+          <li>30+ vectores de análisis</li>
+          <li>Reporte PDF ejecutivo</li>
+          <li>CVSS v3.1 scoring</li>
+          <li>Acceso 24 horas</li>
+          <li class="no">Script de remediación</li>
+          <li class="no">Monitoreo continuo</li>
+        </ul>
+        <button class="btn-buy btn-buy-outline" onclick="openPayModal('quickscan')">Comprar QuickScan</button>
+      </div>
+
+      <!-- ProScan $29 -->
+      <div class="price-card featured">
+        <div class="price-badge">⚡ MÁS POPULAR</div>
+        <div class="price-plan">Profesional</div>
+        <div class="price-name">ProScan</div>
+        <div class="price-desc">Para equipos IT y startups que necesitan análisis completo con herramientas.</div>
+        <div class="price-amount">
+          <div class="price-usd">$29</div>
+          <div class="price-curr">USDT</div>
+        </div>
+        <div class="price-per">pago único · 5 escaneos</div>
+        <ul class="price-features">
+          <li>5 IPs o dominios</li>
+          <li>50+ vectores de análisis</li>
+          <li>Reporte PDF completo (ejecutivo + técnico)</li>
+          <li>CVSS v3.1 + mapeo NIST/ISO</li>
+          <li>Script bash/PowerShell de remediación</li>
+          <li>Acceso 7 días</li>
+          <li class="no">Monitoreo continuo</li>
+        </ul>
+        <button class="btn-buy btn-buy-primary" onclick="openPayModal('proscan')">Comprar ProScan</button>
+      </div>
+
+      <!-- MonitorPro $99/mo -->
+      <div class="price-card">
+        <div class="price-plan">Enterprise</div>
+        <div class="price-name">MonitorPro</div>
+        <div class="price-desc">Vigilancia continua para empresas y portafolios de infraestructura crítica.</div>
+        <div class="price-amount">
+          <div class="price-usd">$99</div>
+          <div class="price-curr">USDT</div>
+        </div>
+        <div class="price-per">por mes · activos ilimitados</div>
+        <ul class="price-features">
+          <li>Activos ilimitados</li>
+          <li>Escaneos automáticos cada 24h</li>
+          <li>Alertas WhatsApp / Email en tiempo real</li>
+          <li>Dashboard de monitoreo en vivo</li>
+          <li>API access + webhooks</li>
+          <li>Soporte prioritario directo</li>
+          <li>SLA 99.9% uptime</li>
+        </ul>
+        <button class="btn-buy btn-buy-outline" onclick="openPayModal('monitorpro')">Activar MonitorPro</button>
+      </div>
+
+    </div>
+    <!-- Payment methods note -->
+    <div class="text-center" style="margin-top:32px">
+      <p style="font-size:.85rem">
+        🇵🇦 <strong style="color:var(--green)">Yappy 6298-2064</strong> · 💳 Tarjeta vía PayPal · 🪙 USDT TRC-20 · Factura disponible para empresas
+      </p>
+    </div>
+
+    <!-- GARANTÍAS -->
+    <div class="guarantee-grid reveal">
+      <div class="guarantee-card">
+        <div class="guarantee-icon">💰</div>
+        <h4>Garantía de reembolso</h4>
+        <p>Si el reporte no detecta hallazgos accionables, te devolvemos tu dinero sin preguntas.</p>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">⚖️</div>
+        <h4>Solo con autorización legal</h4>
+        <p>Escaneamos únicamente objetivos autorizados. Cumplimiento pleno con Ley 81 de Panamá.</p>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">🔒</div>
+        <h4>Confidencialidad total</h4>
+        <p>Reportes cifrados, sin almacenamiento de credenciales. Tus datos nunca se comparten con terceros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST ── -->
+<section id="trust">
+  <div class="container">
+    <div class="trust-row">
+      <div class="trust-badge"><div class="trust-icon">🛡</div><div class="trust-label">NIST 800-53 Alineado</div></div>
+      <div class="trust-badge"><div class="trust-icon">🔐</div><div class="trust-label">OWASP Top 10</div></div>
+      <div class="trust-badge"><div class="trust-icon">📋</div><div class="trust-label">ISO 27001</div></div>
+      <div class="trust-badge"><div class="trust-icon">⚡</div><div class="trust-label">Cloudflare Workers</div></div>
+      <div class="trust-badge"><div class="trust-icon">🌎</div><div class="trust-label">Panamá & LATAM</div></div>
+      <div class="trust-badge"><div class="trust-icon">🔒</div><div class="trust-label">Ley 81 Compliant</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="container">
+    <div class="text-center mb-24">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Preguntas <span class="grad">frecuentes</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Cómo pago con Yappy? <span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><p>Al seleccionar tu plan, elige la pestaña "🇵🇦 Yappy". Busca el número 6298-2064 en el directorio de Yappy, envía el monto exacto del plan con la descripción "VulneraFix [nombre del plan]", y luego confirma tu pago por WhatsApp. Activamos tu servicio en menos de 1 hora hábil.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Emiten factura para empresas? <span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><p>Sí. Emitimos factura para ProScan, Auditoría Profesional y MonitorPro. Si necesitas orden de compra, factura fiscal o pago por ACH, escríbenos por WhatsApp al +507 6298-2064 y lo coordinamos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Es legal escanear mi propia infraestructura? <span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><p>Sí. VulneraFix escanea únicamente activos sobre los cuales declaras tener autorización. Al iniciar un scan aceptas los Términos de Servicio confirmando que eres propietario o tienes permiso explícito del dueño del sistema.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Cuánto tarda el scan? <span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><p>Un QuickScan típico tarda entre 3 y 8 minutos. ProScan hasta 15 minutos. El tiempo varía según la cantidad de puertos y servicios expuestos. Recibirás el reporte PDF por email en cuanto finalice.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Mis datos están seguros? <span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><p>Los reportes se almacenan cifrados en Cloudflare D1. Solo tú tienes acceso vía tu API key única. No almacenamos credenciales, contraseñas ni datos personales más allá de tu email de entrega. Cumplimos con Ley 81 de Panamá.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Puedo escanear dominios de mis clientes? <span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><p>Sí, con el plan ProScan o MonitorPro puedes analizar activos de clientes si cuentas con autorización escrita de ellos. MonitorPro incluye reportes multi-cliente y branding personalizable.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">¿Qué diferencia hay entre el scan gratuito y el pago? <span class="faq-arrow">+</span></button>
+        <div class="faq-answer"><p>El scan gratuito (preview) muestra 3 hallazgos con descripción básica y bloquea el resto. El plan pago desbloquea todos los hallazgos, scores CVSS completos, mapeo normativo, pasos de remediación detallados y el reporte PDF descargable.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- __ VRM NEXT LEVEL REMOVED __ -->
+<section id="next-level" style="display:none">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,102,255,.1);border:1px solid rgba(0,102,255,.25);border-radius:20px;padding:5px 16px;font-size:.78rem;font-family:var(--mono);color:#6699ff;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px">
+        <span style="width:6px;height:6px;background:#6699ff;border-radius:50%;animation:pulse 1.5s infinite"></span>
+        El Siguiente Nivel
+      </div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:16px">
+        De escanear a <span class="grad">pensar solo</span>
+      </h2>
+      <p style="color:var(--muted);max-width:580px;margin:0 auto;font-size:1.05rem;line-height:1.7">
+        VulneraFix detecta las amenazas. <strong style="color:var(--text)">VRM Swarm AI</strong> las caza, las agrupa y responde — de forma autónoma, 24/7, sin que tú tengas que hacer nada.
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;margin-bottom:56px">
+      <div style="background:rgba(0,198,255,.04);border:1px solid rgba(0,198,255,.12);border-radius:16px;padding:28px 24px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+          <span style="font-size:1.6rem">🛡</span>
+          <div>
+            <div style="font-weight:700;font-size:1rem">VulneraFix ATAPAudit</div>
+            <div style="font-size:.75rem;color:var(--muted)">Nivel 1 — Detección</div>
+          </div>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted)"><span style="color:var(--green);font-size:1rem">✓</span> Escaneo de vulnerabilidades bajo demanda</li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted)"><span style="color:var(--green);font-size:1rem">✓</span> Reporte PDF con hallazgos y CVEs</li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted)"><span style="color:var(--green);font-size:1rem">✓</span> Exportación CSAF 2.0 para ISO 27001</li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted)"><span style="color:var(--green);font-size:1rem">✓</span> Auditor IA con Claude (análisis de negocio)</li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:rgba(100,160,255,.3)"><span>○</span> Respuesta autónoma a amenazas</li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:rgba(100,160,255,.3)"><span>○</span> Agentes IA operando 24/7</li>
+        </ul>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(100,160,255,.1)">
+          <span style="font-size:.78rem;color:var(--muted)">Desde </span><span style="font-size:1.2rem;font-weight:700;color:var(--cyan)">$49</span><span style="font-size:.78rem;color:var(--muted)"> USDT/mes</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--blue),var(--cyan));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#000;box-shadow:0 0 30px rgba(0,102,255,.3)">→</div>
+        <div style="font-size:.65rem;color:var(--muted);font-family:var(--mono);letter-spacing:.04em">EVOLUCIÓN</div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(0,102,255,.08),rgba(0,198,255,.05));border:1px solid rgba(0,198,255,.3);border-radius:16px;padding:28px 24px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;right:0;background:linear-gradient(135deg,var(--blue),var(--cyan));font-size:.62rem;font-weight:700;color:#000;padding:4px 12px;border-radius:0 16px 0 10px;letter-spacing:.06em">NUEVO</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+          <span style="font-size:1.6rem">🧬</span>
+          <div>
+            <div style="font-weight:700;font-size:1rem;color:var(--cyan)">VRM Swarm AI</div>
+            <div style="font-size:.75rem;color:rgba(0,198,255,.6)">Nivel 2 — Autonomía</div>
+          </div>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted)"><span style="color:var(--cyan)">✓</span> Todo lo de VulneraFix incluido</li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--cyan)">✓</span> <span style="color:var(--text)">18+ agentes IA en enjambre 24/7</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--cyan)">✓</span> <span style="color:var(--text)">Detección y respuesta autónoma</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--cyan)">✓</span> <span style="color:var(--text)">Planes de remediación automáticos</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--cyan)">✓</span> <span style="color:var(--text)">Clustering de amenazas en tiempo real</span></li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.88rem"><span style="color:var(--cyan)">✓</span> <span style="color:var(--text)">API key para integración externa</span></li>
+        </ul>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(0,198,255,.15)">
+          <span style="font-size:.78rem;color:var(--muted)">Desde </span><span style="font-size:1.2rem;font-weight:700;color:var(--cyan)">$29</span><span style="font-size:.78rem;color:var(--muted)"> USDT/mes</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px">
+      <div style="background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:20px;text-align:center">
+        <div style="font-size:2rem;margin-bottom:8px">🤖</div>
+        <div style="font-weight:700;font-size:.9rem;margin-bottom:4px">Agentes Autónomos</div>
+        <div style="color:var(--muted);font-size:.78rem">Scout · Analyst · Responder · Guardian</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:20px;text-align:center">
+        <div style="font-size:2rem;margin-bottom:8px">🧠</div>
+        <div style="font-weight:700;font-size:.9rem;margin-bottom:4px">Swarm Intelligence</div>
+        <div style="color:var(--muted);font-size:.78rem">Algoritmo boid para coordinación masiva</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:20px;text-align:center">
+        <div style="font-size:2rem;margin-bottom:8px">⚡</div>
+        <div style="font-weight:700;font-size:.9rem;margin-bottom:4px">Respuesta &lt; 5ms</div>
+        <div style="color:var(--muted);font-size:.78rem">Detección y clustering en tiempo real</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:20px;text-align:center">
+        <div style="font-size:2rem;margin-bottom:8px">🔧</div>
+        <div style="font-weight:700;font-size:.9rem;margin-bottom:4px">Auto-Remediación</div>
+        <div style="color:var(--muted);font-size:.78rem">Backup automático antes de cada fix</div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <a href="https://vrm-swarm.pages.dev" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#000;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:10px;text-decoration:none;box-shadow:0 0 40px rgba(0,102,255,.35)">
+        🧬 Activar VRM Swarm AI →
+      </a>
+      <div style="margin-top:12px;font-size:.8rem;color:var(--muted)">Empieza gratis · Sin tarjeta · Plan Starter desde $29 USDT/mes</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>¿Sabes lo que está <span class="grad">expuesto</span> en tu red?</h2>
+      <p>La mayoría de las brechas en LATAM se originan en vulnerabilidades conocidas que nadie detectó. Escanea hoy — es más rápido que preparar el café.</p>
+      <div class="cta-actions">
+        <button class="btn-primary" onclick="openPayModal('quickscan')">🚀 Escanear por $9 USDT</button>
+        <a href="https://wa.me/50762982064?text=Hola,%20quiero%20información%20sobre%20VulneraFix" target="_blank" class="btn-outline">💬 Hablar con un experto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">🛡 VulneraFix</div>
+        <p>Escáner de seguridad y auditoría IT profesional para LATAM. Powered by ATAPAudit · Panamá.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#how">Cómo funciona</a></li>
+          <li><a href="#features">Funciones</a></li>
+          <li><a href="#pricing">Precios</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="https://api.vulnerafix.com" target="_blank">API Docs</a></li>
+          <li><a href="https://admin.vulnerafix.com" target="_blank">Admin Panel</a></li>
+          <li><a href="#">Reportes</a></li>
+          <li><a href="#">Consultoría IT</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/50762982064?text=Hola%2C%20quiero%20información%20sobre%20VulneraFix" target="_blank">💬 WhatsApp +507 6298-2064</a></li>
+          <li><a href="mailto:info@vulnerafix.com">Email</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <div style="margin-top:16px;padding:12px;background:rgba(0,230,118,.06);border:1px solid rgba(0,230,118,.2);border-radius:8px">
+          <div style="font-size:.72rem;color:var(--green);font-weight:700;margin-bottom:4px">🇵🇦 Yappy</div>
+          <div style="font-size:.9rem;font-weight:700;color:var(--text)">6298-2064</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 VulneraFix · ATAPAudit · Ciudad de Panamá, Panamá</p>
+      <div class="footer-badges">
+        <div class="footer-badge">NIST 800-53</div>
+        <div class="footer-badge">OWASP Top 10</div>
+        <div class="footer-badge">ISO 27001</div>
+        <div class="footer-badge">Ley 81</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── PAY MODAL ── -->
+<div class="modal-backdrop" id="pay-modal" onclick="if(event.target===this)closePayModal()">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <h3 id="modal-title">🛡 VulneraFix · Comprar Reporte</h3>
+      <button class="modal-close" onclick="closePayModal()" aria-label="Cerrar modal">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <div class="step-tabs">
+        <div class="step-tab active" id="tab-1">1 · Objetivo</div>
+        <div class="step-tab" id="tab-2">2 · Pago</div>
+        <div class="step-tab" id="tab-3">3 · Confirmar</div>
+        <div class="step-tab" id="tab-4">4 · Reporte</div>
+      </div>
+
+      <!-- Step 1: Target + Plan -->
+      <div id="step-1">
+        <div class="plan-pills" id="plan-pills">
+          <div class="plan-pill" data-plan="auditoria" onclick="selectPlan(this)">
+            <div class="pill-name">Auditoría Pro</div>
+            <div class="pill-price">$490</div>
+          </div>
+          <div class="plan-pill selected" data-plan="quickscan" onclick="selectPlan(this)">
+            <div class="pill-name">QuickScan</div>
+            <div class="pill-price">$9</div>
+          </div>
+          <div class="plan-pill" data-plan="proscan" onclick="selectPlan(this)">
+            <div class="pill-name">ProScan</div>
+            <div class="pill-price">$29</div>
+          </div>
+          <div class="plan-pill" data-plan="monitorpro" onclick="selectPlan(this)">
+            <div class="pill-name">MonitorPro</div>
+            <div class="pill-price">$99/mo</div>
+          </div>
+        </div>
+        <div class="form-label">IP o Dominio objetivo *</div>
+        <input class="form-input" id="pay-target" type="text" placeholder="203.0.113.1 o midominio.com" />
+        <div class="form-label">Tu email (para recibir el reporte) *</div>
+        <input class="form-input" id="pay-email" type="email" placeholder="tu@empresa.com" />
+        <div class="auth-checkbox-row">
+          <input type="checkbox" id="auth-checkbox" />
+          <label for="auth-checkbox">Confirmo que tengo autorización legal para escanear este objetivo y acepto los Términos de Servicio.</label>
+        </div>
+        <div style="margin-top:8px">
+          <button class="btn-primary btn-full" onclick="goToPayment()">Continuar → Elegir pago</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Payment -->
+      <div id="step-2" style="display:none">
+        <!-- Amount summary -->
+        <div class="amount-display" style="padding:12px 0 16px">
+          <div class="amount-big" id="pay-amount">$9</div>
+          <div class="amount-curr" id="pay-amount-note" style="font-size:.85rem;color:var(--muted)">QuickScan · 1 escaneo</div>
+        </div>
+
+        <!-- Payment method tabs -->
+        <div class="pay-method-tabs" role="tablist" aria-label="Métodos de pago">
+          <button class="pay-method-tab active" id="tab-yappy" role="tab" aria-selected="true" aria-controls="pmt-yappy" onclick="selectPayMethod('yappy')">🇵🇦 Yappy</button>
+          <button class="pay-method-tab" id="tab-card" role="tab" aria-selected="false" aria-controls="pmt-card" onclick="selectPayMethod('card')">💳 Tarjeta</button>
+          <button class="pay-method-tab" id="tab-usdt" role="tab" aria-selected="false" aria-controls="pmt-usdt" onclick="selectPayMethod('usdt')">🪙 USDT</button>
+        </div>
+
+        <!-- Yappy -->
+        <div class="pay-method-content active" id="pmt-yappy" role="tabpanel">
+          <div class="yappy-number-box" onclick="copyYappy()" title="Click para copiar número" aria-label="Copiar número Yappy 6298-2064">
+            <div class="yappy-number" id="yappy-display">6298-2064</div>
+            <div class="yappy-copy-hint">📋 Click para copiar número</div>
+          </div>
+          <ol class="yappy-steps" aria-label="Pasos para pagar con Yappy">
+            <li>Abre la app <strong>Yappy</strong> en tu celular</li>
+            <li>Busca <strong>"Andrey Alvarez"</strong> en el Directorio y selecciona el número 6298-2064</li>
+            <li>Envía el monto exacto <strong id="yappy-amount-text">$9</strong> · descripción: <strong id="yappy-desc">VulneraFix QuickScan</strong></li>
+          </ol>
+          <a id="btn-yappy-wa" href="#" target="_blank" class="btn-yappy-confirm" aria-label="Confirmar pago por WhatsApp">✅ Ya pagué — Confirmar por WhatsApp</a>
+        </div>
+
+        <!-- Tarjeta -->
+        <div class="pay-method-content" id="pmt-card" role="tabpanel">
+          <div class="wallet-box" style="text-align:center">
+            <div class="wallet-label">PayPal</div>
+            <a href="https://paypal.me/TUUSUARIO" target="_blank" rel="noopener" style="color:var(--cyan);font-weight:700;font-size:1rem;text-decoration:none">paypal.me/TUUSUARIO</a>
+            <p style="font-size:.8rem;margin-top:10px">Envía el monto exacto como "pago de bienes o servicios".</p>
+          </div>
+          <div class="alert-box" style="margin:12px 0">
+            🧾 ¿Necesitas factura, orden de compra o ACH? <a href="https://wa.me/50762982064?text=Hola%2C%20necesito%20factura%20para%20VulneraFix" target="_blank" style="color:var(--orange);font-weight:700">Escríbenos por WhatsApp →</a>
+          </div>
+          <button class="btn-primary btn-full" onclick="goToConfirm()">Ya pagué → Confirmar</button>
+        </div>
+
+        <!-- USDT -->
+        <div class="pay-method-content" id="pmt-usdt" role="tabpanel">
+          <div class="network-tabs">
+            <div class="net-tab active" id="net-tron" onclick="selectNetwork('tron')">🔴 Tron TRC-20 (~$0.10)</div>
+            <div class="net-tab" id="net-polygon" onclick="selectNetwork('polygon')">🟣 Polygon (~$0.01)</div>
+          </div>
+          <div class="amount-display" onclick="copyAmount()" style="cursor:pointer;padding:12px 0" title="Click para copiar monto exacto">
+            <div class="amount-big" id="pay-amount-usdt">$9</div>
+            <div class="amount-curr">USDT <span style="font-size:.75rem;opacity:.6">· click para copiar</span></div>
+          </div>
+          <div class="qr-placeholder" id="qr-box">Dirección wallet<br>aquí (QR)</div>
+          <div class="wallet-box">
+            <div class="wallet-label" id="wallet-network-label">Tron TRC-20</div>
+            <div class="wallet-addr" id="wallet-address">TVjSFjihgn4D223E4xJmAxqNkywYRRxY4N</div>
+            <div class="wallet-copy" onclick="copyWallet()">📋 Copiar dirección</div>
+          </div>
+          <div class="modal-divider"></div>
+          <button class="btn-primary btn-full" onclick="goToConfirm()">Ya pagué → Verificar en blockchain</button>
+          <p style="font-size:.78rem;color:var(--muted2);text-align:center;margin-top:10px">Envía exactamente el monto indicado. TxHash se verifica automáticamente.</p>
+        </div>
+      </div>
+
+      <!-- Step 3: Polling -->
+      <div id="step-3" style="display:none">
+        <div class="poll-status">
+          <div class="poll-spinner" id="poll-spinner"></div>
+          <div class="poll-msg" id="poll-msg">Verificando transacción en blockchain...</div>
+          <div class="poll-timer" id="poll-timer">00:00</div>
+          <p style="font-size:.78rem;color:var(--muted2);margin-top:12px">Las confirmaciones TRC-20 toman 1–3 minutos. Polygon menos de 30 segundos.</p>
+        </div>
+        <div style="margin-top:20px">
+          <button class="btn-outline btn-full" id="btn-manual-check" onclick="checkManual()">Verificar manualmente</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Results -->
+      <div id="step-4" style="display:none">
+        <div class="success-box">
+          <div class="success-icon">🛡</div>
+          <div class="success-title" style="color:var(--cyan)">Reporte completado</div>
+          <div id="success-msg" style="text-align:left;font-size:.88rem;color:var(--muted)">Procesando resultados...</div>
+          <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap">
+            <a id="btn-wa-report" href="https://wa.me/50762982064?text=Hola%2C%20quiero%20el%20reporte%20PDF%20completo%20de%20mi%20scan" target="_blank"
+               style="flex:1;background:linear-gradient(135deg,#00c853,#00e676);color:#000;font-weight:700;font-size:.82rem;padding:11px 16px;border-radius:8px;text-align:center;text-decoration:none">
+              📄 Reporte PDF completo por WA
+            </a>
+            <button class="btn-outline" style="flex:1;font-size:.82rem;padding:11px 16px" onclick="closePayModal()">Cerrar</button>
+          </div>
+          <p style="font-size:.75rem;color:var(--muted2);margin-top:14px">ID de orden: <span id="order-id-display" style="font-family:var(--mono);color:var(--cyan)">—</span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+// ── CONFIG ──
+const API = 'https://vrm-saas.aalvarez351.workers.dev';
+const PLANS = {
+  auditoria:  { name: 'Auditoría Profesional', price: 490, note: 'Hasta 5 activos · entrega 5 días hábiles' },
+  quickscan:  { name: 'QuickScan',  price: 9,  note: 'Headers + TLS · reporte inmediato' },
+  proscan:    { name: 'ProScan',    price: 29, note: 'Análisis completo · puertos + IA' },
+  monitorpro: { name: 'MonitorPro', price: 99, note: 'Activos ilimitados · mensual' }
+};
+
+let currentPlan    = 'quickscan';
+let currentNetwork = 'tron';
+let pollInterval   = null;
+let pollSeconds    = 0;
+let currentOrderId = null;
+let currentAmount  = null;  // exact unique amount from API
+
+// ── TEASER SCANNER ──
+async function runTeaser() {
+  const target = document.getElementById('scanner-target').value.trim();
+  if (!target) { toast('Ingresa una IP o dominio'); return; }
+
+  const btn = document.getElementById('btn-run-scan');
+  btn.disabled = true;
+  btn.textContent = 'Scanning...';
+
+  const out = document.getElementById('terminal-output');
+  out.innerHTML = '';
+  document.getElementById('scan-overlay').classList.remove('active');
+
+  const progress = document.getElementById('scan-progress');
+  const fill = document.getElementById('progress-fill');
+  const label = document.getElementById('progress-label');
+  progress.classList.add('active');
+
+  const lines = [
+    { text: `[*] Iniciando VulneraFix Scanner v2.0`, type: 'info', pct: 5 },
+    { text: `[*] Objetivo: ${target}`, type: 'info', pct: 8 },
+    { text: `[*] Resolución DNS... OK`, type: 'ok', pct: 12 },
+    { text: `[*] Escaneando puertos abiertos (top 1000)...`, type: 'info', pct: 20 },
+    { text: `[+] Puerto 22/tcp  ABIERTO  — OpenSSH 8.9p1`, type: 'ok', pct: 28 },
+    { text: `[+] Puerto 80/tcp  ABIERTO  — HTTP`, type: 'ok', pct: 32 },
+    { text: `[+] Puerto 443/tcp ABIERTO  — HTTPS`, type: 'ok', pct: 36 },
+    { text: `[*] Verificando TLS/SSL...`, type: 'info', pct: 42 },
+    { text: `[!] TLSv1.0 habilitado — riesgo de downgrade attack`, type: 'warn', pct: 48 },
+    { text: `[*] Analizando headers HTTP de seguridad...`, type: 'info', pct: 54 },
+    { text: `[!] Content-Security-Policy: AUSENTE`, type: 'warn', pct: 58 },
+    { text: `[!] X-Frame-Options: AUSENTE — clickjacking posible`, type: 'warn', pct: 62 },
+    { text: `[*] Buscando archivos sensibles expuestos...`, type: 'info', pct: 68 },
+    { text: `[!!] .env ENCONTRADO — posibles credenciales expuestas`, type: 'err', pct: 75 },
+    { text: `[*] Verificando CVEs conocidos...`, type: 'info', pct: 80 },
+    { text: `[*] Analizando configuración firewall...`, type: 'info', pct: 86 },
+    { text: `[*] Compilando reporte...`, type: 'info', pct: 94 },
+    { text: `[+] Scan preview completado — 3 hallazgos encontrados`, type: 'ok', pct: 100 },
+  ];
+
+  for (const line of lines) {
+    await delay(Math.random() * 220 + 80);
+    const el = document.createElement('div');
+    el.className = 'terminal-line ' + line.type;
+    el.textContent = line.text;
+    out.appendChild(el);
+    out.scrollTop = out.scrollHeight;
+    fill.style.width = line.pct + '%';
+    label.textContent = line.text.replace(/^\[.{1,2}\] /, '');
+  }
+
+  await delay(600);
+  progress.classList.remove('active');
+  document.getElementById('scan-overlay').classList.add('active');
+  btn.disabled = false;
+  btn.textContent = 'Scan';
+}
+
+function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// ── PAY MODAL ──
+function openPayModal(plan) {
+  currentPlan = plan || currentPlan;
+  document.getElementById('pay-modal').classList.add('open');
+  showStep(1);
+  // Pre-select plan
+  document.querySelectorAll('.plan-pill').forEach(p => {
+    p.classList.toggle('selected', p.dataset.plan === currentPlan);
+  });
+  // Pre-fill target from scanner
+  const t = document.getElementById('scanner-target')?.value;
+  if (t) document.getElementById('pay-target').value = t;
+}
+
+function closePayModal() {
+  document.getElementById('pay-modal').classList.remove('open');
+  clearInterval(pollInterval);
+}
+
+function showStep(n) {
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById('step-' + i).style.display = i === n ? 'block' : 'none';
+    const tab = document.getElementById('tab-' + i);
+    tab.classList.toggle('active', i === n);
+    tab.classList.toggle('done', i < n);
+  }
+}
+
+function selectPlan(el) {
+  document.querySelectorAll('.plan-pill').forEach(p => p.classList.remove('selected'));
+  el.classList.add('selected');
+  currentPlan = el.dataset.plan;
+}
+
+function selectNetwork(net) {
+  currentNetwork = net;
+  document.getElementById('net-tron').classList.toggle('active', net === 'tron');
+  document.getElementById('net-polygon').classList.toggle('active', net === 'polygon');
+  // Network selection only matters before step 1 is submitted
+  // If already in step 2, wallet/QR is already set by API
+}
+
+// ── PAYMENT METHOD TABS ──
+function selectPayMethod(method) {
+  ['yappy','card','usdt'].forEach(m => {
+    document.getElementById('tab-' + m).classList.toggle('active', m === method);
+    document.getElementById('tab-' + m).setAttribute('aria-selected', m === method);
+    document.getElementById('pmt-' + m).classList.toggle('active', m === method);
+  });
+}
+
+function copyYappy() {
+  navigator.clipboard.writeText('62982064').then(() => toast('Número copiado ✓'));
+}
+
+function buildYappyWALink(plan, price, target, email) {
+  const msg = `Hola, acabo de pagar por Yappy el plan ${plan} ($${price}) para escanear: ${target}. Mi email es ${email}. Por favor confirmar mi auditoría.`;
+  return 'https://wa.me/50762982064?text=' + encodeURIComponent(msg);
+}
+
+async function goToPayment() {
+  const target = document.getElementById('pay-target').value.trim();
+  const email  = document.getElementById('pay-email').value.trim();
+  const auth   = document.getElementById('auth-checkbox').checked;
+  if (!target) { toast('Ingresa un objetivo (IP o dominio)'); return; }
+  if (!email)  { toast('Ingresa tu email para recibir el reporte'); return; }
+  if (!auth)   { toast('⚠️ Debes confirmar autorización legal para continuar'); return; }
+
+  const btn = document.querySelector('#step-1 .btn-primary');
+  if (btn) { btn.disabled = true; btn.textContent = 'Preparando pago...'; }
+
+  try {
+    const res = await fetch(API + '/api/quick-scan/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ target, email, plan: currentPlan, network: currentNetwork })
+    });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Error creando checkout');
+
+    currentOrderId = data.id;
+    currentAmount  = data.amount_usdt;
+
+    // Render QR image
+    const qrBox = document.getElementById('qr-box');
+    qrBox.innerHTML = `<img src="${data.qr_url}" style="width:140px;height:140px;border-radius:8px" alt="QR pago USDT" />`;
+
+    // Update amount and wallet (USDT tab)
+    const price = data.amount_usdt;
+    document.getElementById('pay-amount').textContent = '$' + price;
+    document.getElementById('pay-amount-usdt').textContent = '$' + price;
+    document.getElementById('pay-amount-note').textContent = PLANS[currentPlan].note + ' · ID: ' + data.id.slice(0,8);
+    document.getElementById('wallet-address').textContent = data.wallet;
+    document.getElementById('wallet-network-label').textContent =
+      data.network === 'tron' ? 'Tron TRC-20' : 'Polygon MATIC';
+
+    // Update Yappy tab
+    const planName = PLANS[currentPlan].name;
+    document.getElementById('yappy-amount-text').textContent = '$' + price;
+    document.getElementById('yappy-desc').textContent = 'VulneraFix ' + planName;
+    document.getElementById('btn-yappy-wa').href = buildYappyWALink(planName, price, target, email);
+
+    // Default to Yappy tab
+    selectPayMethod('yappy');
+    showStep(2);
+  } catch(e) {
+    toast('Error: ' + e.message);
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = 'Continuar → Pago'; }
+  }
+}
+
+function copyWallet() {
+  const addr = document.getElementById('wallet-address').textContent;
+  navigator.clipboard.writeText(addr).then(() => toast('Dirección copiada ✓'));
+}
+
+function copyAmount() {
+  if (currentAmount) navigator.clipboard.writeText(currentAmount).then(() => toast('Monto copiado ✓'));
+}
+
+async function goToConfirm() {
+  if (!currentOrderId) { toast('Primero completa el paso 1'); return; }
+  showStep(3);
+  pollSeconds = 0;
+  document.getElementById('poll-msg').textContent = 'Esperando confirmación en blockchain...';
+
+  clearInterval(pollInterval);
+  pollInterval = setInterval(async () => {
+    pollSeconds++;
+    const mm = String(Math.floor(pollSeconds/60)).padStart(2,'0');
+    const ss = String(pollSeconds%60).padStart(2,'0');
+    document.getElementById('poll-timer').textContent = mm + ':' + ss;
+
+    // Poll every 10 seconds
+    if (pollSeconds % 10 === 0) {
+      await _checkPaymentStatus();
+    }
+
+    // Timeout after 20 minutes
+    if (pollSeconds >= 1200) {
+      clearInterval(pollInterval);
+      document.getElementById('poll-msg').textContent = 'Tiempo agotado. Contacta soporte por WhatsApp.';
+    }
+  }, 1000);
+}
+
+async function _checkPaymentStatus() {
+  if (!currentOrderId) return;
+  try {
+    const res  = await fetch(`${API}/api/quick-scan/${currentOrderId}`);
+    const data = await res.json();
+
+    if (data.payment_status === 'confirmed') {
+      document.getElementById('poll-msg').textContent =
+        data.scan_status === 'completed'
+          ? '✅ Pago confirmado · Procesando reporte...'
+          : '✅ Pago confirmado · Escaneando ' + (data.target || '') + '...';
+    }
+
+    if (data.scan_status === 'completed' && data.result) {
+      clearInterval(pollInterval);
+      renderResults(data.result, data.tx_hash);
+    } else if (data.scan_status === 'running') {
+      document.getElementById('poll-msg').textContent = '⚡ Escaneando ' + (data.target || '') + '...';
+    }
+  } catch { /* network blip, keep polling */ }
+}
+
+async function checkManual() {
+  document.getElementById('poll-msg').textContent = 'Verificando manualmente...';
+  await _checkPaymentStatus();
+  if (document.getElementById('step-3').style.display !== 'none') {
+    document.getElementById('poll-msg').textContent = 'Verificado · transacción aún pendiente en blockchain...';
+    toast('TRC-20: 1–3 min · Polygon: 30 seg. Seguimos esperando.');
+  }
+}
+
+function renderResults(result, txHash) {
+  const plan = PLANS[currentPlan];
+  const riskColor = result.risk_level === 'ALTO' ? '#ff4444' :
+                    result.risk_level === 'MODERADO' ? '#ff9100' : '#00e676';
+  const topFindings = (result.findings || []).slice(0, plan === 'quickscan' ? 3 : 10)
+    .map(f => {
+      const color = f.severity==='critical'?'#ff4444':f.severity==='high'?'#ff9100':
+                    f.severity==='medium'?'#ffcc00':'#aaa';
+      return `<div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:${color};color:#000;font-size:.65rem;font-weight:700;padding:2px 6px;border-radius:4px;text-transform:uppercase">${f.severity}</span>
+          <span style="font-size:.82rem;font-weight:600">${f.name}</span>
+        </div>
+        <div style="font-size:.75rem;color:rgba(232,240,255,.55)">${f.remediation||''}</div>
+      </div>`;
+    }).join('');
+
+  document.getElementById('success-msg').innerHTML = `
+    <div style="text-align:left">
+      <div style="display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:100px;background:rgba(255,255,255,.04);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:1.8rem;font-weight:800;color:${riskColor}">${result.risk_score}</div>
+          <div style="font-size:.72rem;color:rgba(232,240,255,.55)">Risk Score</div>
+          <div style="font-size:.8rem;font-weight:700;color:${riskColor}">${result.risk_level}</div>
+        </div>
+        <div style="flex:1;min-width:100px;background:rgba(255,255,255,.04);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:1.8rem;font-weight:800;color:#ff4444">${(result.counts||{}).high||0}</div>
+          <div style="font-size:.72rem;color:rgba(232,240,255,.55)">Crítico/Alto</div>
+        </div>
+        <div style="flex:1;min-width:100px;background:rgba(255,255,255,.04);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:1.8rem;font-weight:800;color:#ffcc00">${(result.counts||{}).medium||0}</div>
+          <div style="font-size:.72rem;color:rgba(232,240,255,.55)">Medios</div>
+        </div>
+        <div style="flex:1;min-width:100px;background:rgba(255,255,255,.04);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:1.8rem;font-weight:800">${(result.findings||[]).length}</div>
+          <div style="font-size:.72rem;color:rgba(232,240,255,.55)">Total hallazgos</div>
+        </div>
+      </div>
+      <div style="font-size:.78rem;font-weight:700;color:var(--cyan);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em">Hallazgos principales</div>
+      ${topFindings}
+      ${txHash ? `<div style="margin-top:12px;font-size:.72rem;color:rgba(232,240,255,.4)">TX: <a href="https://tronscan.org/#/transaction/${txHash}" target="_blank" style="color:var(--cyan)">${txHash.slice(0,20)}...</a></div>` : ''}
+    </div>
+  `;
+  // Update WA link with order ID and target
+  if (currentOrderId) {
+    const waLink = `https://wa.me/50762982064?text=Hola%2C%20necesito%20el%20reporte%20PDF%20de%20mi%20scan.%20ID%3A%20${currentOrderId}%20Target%3A%20${encodeURIComponent(result.target||'')}`;
+    document.getElementById('btn-wa-report').href = waLink;
+    document.getElementById('order-id-display').textContent = currentOrderId.slice(0,16) + '...';
+  }
+  showStep(4);
+}
+
+// ── FAQ ──
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ── TOAST ──
+function toast(msg) {
+  const t = document.createElement('div');
+  t.textContent = msg;
+  Object.assign(t.style, {
+    position:'fixed', bottom:'24px', left:'50%', transform:'translateX(-50%)',
+    background:'#1a2540', border:'1px solid rgba(0,198,255,.3)', color:'#e8f0ff',
+    padding:'12px 24px', borderRadius:'10px', fontSize:'.88rem', zIndex:'999',
+    boxShadow:'0 8px 32px rgba(0,0,0,.4)', animation:'slideUp .3s ease'
+  });
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2800);
+}
+
+// ── KEYBOARD ACCESSIBILITY ──
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePayModal();
+});
+
+// ── REVEAL ──
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── ANALYTICS ──
+(function() {
+  const SESSION_KEY = 'vfx_sid';
+  let sid = sessionStorage.getItem(SESSION_KEY);
+  if (!sid) { sid = 'vfx_' + Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem(SESSION_KEY, sid); }
+  fetch('https://analytics-tracker.aalvarez351.workers.dev/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ project_id: 'PROJ-001', page_url: location.href, page_path: location.pathname, referrer: document.referrer, session_id: sid, ua: navigator.userAgent })
+  }).catch(() => {});
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     AGENTE DE VENTAS CON VOZ — VulneraFix "Alex"
+     Alineado con NVIDIA NeMo Speech AI (github.com/NVIDIA-NeMo/NeMo)
+     Backend: voice-agent.aalvarez351.workers.dev
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<style>
+  /* ── Voice Agent Widget ── */
+  #va-btn {
+    position: fixed; bottom: 28px; right: 28px; z-index: 9999;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: linear-gradient(135deg, #00c6ff, #0066ff);
+    border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 24px rgba(0,198,255,.45);
+    transition: transform .2s, box-shadow .2s;
+  }
+  #va-btn:hover { transform: scale(1.08); box-shadow: 0 6px 32px rgba(0,198,255,.6); }
+  #va-btn.listening { animation: va-pulse 1.2s infinite; background: linear-gradient(135deg, #ff4444, #ff9100); }
+  #va-btn.thinking  { animation: va-spin 1s linear infinite; }
+  @keyframes va-pulse { 0%,100%{box-shadow:0 4px 24px rgba(255,68,68,.6)} 50%{box-shadow:0 4px 48px rgba(255,68,68,.9)} }
+  @keyframes va-spin  { to { transform: rotate(360deg); } }
+
+  #va-panel {
+    position: fixed; bottom: 100px; right: 28px; z-index: 9998;
+    width: 340px; max-height: 480px;
+    background: rgba(6,13,31,.97); backdrop-filter: blur(20px);
+    border: 1px solid rgba(0,198,255,.25); border-radius: 18px;
+    display: none; flex-direction: column; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,.5);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  #va-panel.open { display: flex; }
+
+  #va-header {
+    padding: 14px 18px; display: flex; align-items: center; gap: 10px;
+    border-bottom: 1px solid rgba(0,198,255,.15);
+    background: rgba(0,102,255,.08);
+  }
+  .va-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, #00c6ff, #0066ff);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  #va-header-info { flex: 1; }
+  #va-header-info strong { display: block; font-size: .9rem; color: #e8f0ff; }
+  #va-header-info span   { font-size: .75rem; color: rgba(0,198,255,.85); }
+  #va-close {
+    background: none; border: none; color: rgba(232,240,255,.5);
+    cursor: pointer; font-size: 1.2rem; line-height: 1; padding: 4px;
+  }
+  #va-close:hover { color: #e8f0ff; }
+
+  #va-messages {
+    flex: 1; overflow-y: auto; padding: 14px; display: flex;
+    flex-direction: column; gap: 10px; scroll-behavior: smooth;
+  }
+  #va-messages::-webkit-scrollbar { width: 4px; }
+  #va-messages::-webkit-scrollbar-thumb { background: rgba(0,198,255,.3); border-radius: 4px; }
+
+  .va-msg {
+    max-width: 88%; padding: 10px 13px; border-radius: 14px;
+    font-size: .85rem; line-height: 1.5; color: #e8f0ff;
+  }
+  .va-msg.agent {
+    background: rgba(0,102,255,.18); border: 1px solid rgba(0,102,255,.2);
+    align-self: flex-start; border-bottom-left-radius: 4px;
+  }
+  .va-msg.user {
+    background: rgba(0,198,255,.12); border: 1px solid rgba(0,198,255,.2);
+    align-self: flex-end; border-bottom-right-radius: 4px;
+  }
+  .va-msg.typing { opacity: .6; font-style: italic; }
+
+  #va-footer {
+    padding: 12px 14px; border-top: 1px solid rgba(0,198,255,.15);
+    display: flex; align-items: center; gap: 8px;
+  }
+  #va-input {
+    flex: 1; background: rgba(255,255,255,.06); border: 1px solid rgba(0,198,255,.2);
+    border-radius: 10px; color: #e8f0ff; font-size: .85rem; padding: 9px 12px;
+    outline: none;
+  }
+  #va-input::placeholder { color: rgba(232,240,255,.35); }
+  #va-input:focus { border-color: rgba(0,198,255,.5); }
+  #va-send, #va-mic {
+    width: 36px; height: 36px; border-radius: 50%; border: none;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: opacity .2s;
+  }
+  #va-send { background: linear-gradient(135deg,#00c6ff,#0066ff); color:#000; font-size:.9rem; }
+  #va-mic  { background: rgba(255,255,255,.08); color:#e8f0ff; font-size:1rem; border: 1px solid rgba(0,198,255,.2); }
+  #va-mic.active { background: rgba(255,68,68,.2); border-color: #ff4444; color: #ff4444; }
+  #va-send:hover, #va-mic:hover { opacity: .8; }
+
+  #va-status {
+    text-align: center; font-size: .72rem; color: rgba(0,198,255,.6);
+    padding: 4px 0 0; min-height: 18px;
+  }
+</style>
+
+<!-- Widget HTML -->
+<div id="va-panel">
+  <div id="va-header">
+    <div class="va-avatar">🛡️</div>
+    <div id="va-header-info">
+      <strong>Alex — Asesor VulneraFix</strong>
+      <span id="va-status-dot">● En línea · Powered by NVIDIA NeMo</span>
+    </div>
+    <button id="va-close" title="Cerrar">✕</button>
+  </div>
+  <div id="va-messages"></div>
+  <div id="va-footer">
+    <input id="va-input" type="text" placeholder="Escribe o usa el micrófono…" autocomplete="off" />
+    <button id="va-mic" title="Hablar">🎤</button>
+    <button id="va-send" title="Enviar">➤</button>
+  </div>
+  <div id="va-status"></div>
+</div>
+<button id="va-btn" title="Hablar con Alex — Asesor de ciberseguridad">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:#000">
+    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/>
+    <line x1="8" y1="23" x2="16" y2="23"/>
+  </svg>
+</button>
+
+<script>
+(function() {
+  'use strict';
+  const PROJECT    = 'vulnerafix';
+  const WORKER_URL = 'https://voice-agent.aalvarez351.workers.dev';
+  const SESSION_ID = 'vfx_va_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+
+  const panel    = document.getElementById('va-panel');
+  const btn      = document.getElementById('va-btn');
+  const closeBtn = document.getElementById('va-close');
+  const messages = document.getElementById('va-messages');
+  const input    = document.getElementById('va-input');
+  const sendBtn  = document.getElementById('va-send');
+  const micBtn   = document.getElementById('va-mic');
+  const statusEl = document.getElementById('va-status');
+
+  let isOpen = false, isListening = false, isSpeaking = false, greeted = false;
+  let recognition = null;
+  const synth = window.speechSynthesis;
+
+  // ── Panel toggle ──
+  btn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    panel.classList.toggle('open', isOpen);
+    if (isOpen && !greeted) { greeted = true; fetchGreeting(); }
+  });
+  closeBtn.addEventListener('click', () => { isOpen = false; panel.classList.remove('open'); stopSpeaking(); });
+
+  // ── Greeting ──
+  async function fetchGreeting() {
+    addMessage('agent', '…', 'typing');
+    try {
+      const r = await fetch(`${WORKER_URL}/api/greeting/${PROJECT}`);
+      const d = await r.json();
+      removeTyping();
+      addMessage('agent', d.greeting || '¡Hola! ¿En qué puedo ayudarte?');
+      speak(d.greeting, d.voice_lang || 'es');
+    } catch {
+      removeTyping();
+      addMessage('agent', '¡Hola! Soy Alex, tu asesor de ciberseguridad. ¿Cómo puedo ayudarte hoy?');
+    }
+  }
+
+  // ── Send message ──
+  async function sendMessage(text) {
+    if (!text.trim()) return;
+    addMessage('user', text);
+    input.value = '';
+    btn.classList.add('thinking');
+    addMessage('agent', '…', 'typing');
+    setStatus('Analizando…');
+    stopSpeaking();
+
+    try {
+      const r = await fetch(`${WORKER_URL}/api/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ project: PROJECT, message: text, session_id: SESSION_ID }),
+      });
+      const d = await r.json();
+      removeTyping();
+      if (d.ok) {
+        addMessage('agent', d.reply);
+        speak(d.reply, d.voice_lang || 'es');
+      } else {
+        addMessage('agent', 'Lo siento, hubo un problema. ¿Puedes repetir tu pregunta?');
+      }
+    } catch {
+      removeTyping();
+      addMessage('agent', 'Problema de conexión. Contáctanos por WhatsApp: +507 6298-2064');
+    } finally {
+      btn.classList.remove('thinking');
+      setStatus('');
+    }
+  }
+
+  sendBtn.addEventListener('click', () => sendMessage(input.value));
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(input.value); });
+
+  // ── Speech Synthesis (TTS) — NVIDIA NeMo Speech AI compatible ──
+  function speak(text, lang) {
+    if (!synth) return;
+    stopSpeaking();
+    isSpeaking = true;
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = lang || 'es-PA';
+    utter.rate = 1.05;
+    utter.pitch = 1.0;
+
+    // Seleccionar la mejor voz disponible en español
+    const voices = synth.getVoices();
+    const esVoice = voices.find(v => v.lang.startsWith('es') && v.localService)
+                 || voices.find(v => v.lang.startsWith('es'));
+    if (esVoice) utter.voice = esVoice;
+
+    utter.onend = () => { isSpeaking = false; };
+    synth.speak(utter);
+  }
+
+  function stopSpeaking() { if (synth) { synth.cancel(); isSpeaking = false; } }
+
+  // ── Speech Recognition (ASR) — Web Speech API ──
+  if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SR();
+    recognition.lang = 'es-PA';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart  = () => { isListening = true; micBtn.classList.add('active'); btn.classList.add('listening'); setStatus('Escuchando…'); stopSpeaking(); };
+    recognition.onend    = () => { isListening = false; micBtn.classList.remove('active'); btn.classList.remove('listening'); setStatus(''); };
+    recognition.onerror  = () => { isListening = false; micBtn.classList.remove('active'); btn.classList.remove('listening'); setStatus(''); };
+    recognition.onresult = e => {
+      const transcript = e.results[0][0].transcript;
+      input.value = transcript;
+      sendMessage(transcript);
+    };
+
+    micBtn.addEventListener('click', () => {
+      if (isListening) { recognition.stop(); return; }
+      if (!isOpen) { isOpen = true; panel.classList.add('open'); if (!greeted) { greeted = true; fetchGreeting(); } }
+      recognition.start();
+    });
+  } else {
+    micBtn.style.opacity = '0.3';
+    micBtn.title = 'Micrófono no soportado en este navegador';
+  }
+
+  // ── Helpers ──
+  function addMessage(role, text, cls) {
+    const el = document.createElement('div');
+    el.className = `va-msg ${role}${cls ? ' ' + cls : ''}`;
+    el.textContent = text;
+    messages.appendChild(el);
+    messages.scrollTop = messages.scrollHeight;
+    return el;
+  }
+
+  function removeTyping() {
+    const t = messages.querySelector('.typing');
+    if (t) t.remove();
+  }
+
+  function setStatus(msg) { statusEl.textContent = msg; }
+
+  // Cargar voces (algunas APIs las cargan async)
+  if (synth && synth.onvoiceschanged !== undefined) {
+    synth.onvoiceschanged = () => {};
+  }
+})();
+</script>
+<script>!function(c){var P=[{n:'AgentXIA',t:'Empresa completa con 36 agentes de IA',u:'https://agentxia.pages.dev',g:'a'},{n:'Cobro Express',t:'Cobros autom\u00e1ticos y pagos USDT',u:'https://cobro-express.pages.dev',g:'a'},{n:'Cotiza',t:'Cotizaciones autom\u00e1ticas por WhatsApp',u:'https://cotiza-api.aalvarez351.workers.dev',g:'a'},{n:'ReportPro',t:'Reportes t\u00e9cnicos con firma digital',u:'https://reportpro.pages.dev',g:'a'},{n:'VulneraFix',t:'Auditor\u00eda de ciberseguridad profesional',u:'https://vulnerafix.com',g:'s'},{n:'Auditor IA',t:'Diagn\u00f3stico inteligente para tu negocio',u:'https://auditor-ia.aalvarez351.workers.dev',g:'s'},{n:'VRM Swarm',t:'Seguridad distribuida con IA en enjambre',u:'https://vrm-swarm-api.aalvarez351.workers.dev',g:'s'},{n:'AcademIA Pro',t:'Cursos IT: Cloud, IA, DevSecOps',u:'https://academia-pro.pages.dev',g:'e'},{n:'Red IA Panam\u00e1',t:'Comunidad de inteligencia artificial',u:'https://red-ia-panama.pages.dev',g:'e'},{n:'AgentesiaOS',t:'Sistema operativo para agentes de IA',u:'https://agentesia-os.aalvarez351.workers.dev',g:'e'}];function cards(g){return P.filter(function(p){return p.g===g&&p.n!==c.name}).map(function(p){return'<a href="'+p.u+'" target="_blank" rel="noopener" class="agn-card"><b>'+p.n+'</b><span>'+p.t+'</span></a>'}).join('')}var s='<style>#agn-eco{background:#060910;border-top:1px solid rgba(0,229,255,.12);padding:48px 24px 24px;font-family:system-ui,sans-serif;box-sizing:border-box;width:100%}.agn-w{max-width:1100px;margin:0 auto}.agn-hd{text-align:center;margin-bottom:36px}.agn-hd h3{margin:0;font-size:1rem;font-weight:700;color:#e2eaf4;letter-spacing:.1em;text-transform:uppercase}.agn-hd p{margin:6px 0 10px;font-size:.73rem;color:#3a5060;letter-spacing:.04em}.agn-badge{display:inline-block;font-size:.62rem;background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.2);color:#00e5ff;border-radius:4px;padding:2px 10px;font-weight:700}.agn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}@media(max-width:760px){.agn-grid{grid-template-columns:1fr}}.agn-col h4{margin:0 0 12px;font-size:.62rem;font-weight:700;color:#00e5ff;letter-spacing:.14em;text-transform:uppercase;padding-bottom:8px;border-bottom:1px solid rgba(0,229,255,.12)}.agn-card{display:flex;flex-direction:column;gap:3px;padding:10px 12px;border-radius:7px;text-decoration:none;border:1px solid transparent;transition:border-color .18s,background .18s;margin-bottom:5px}.agn-card:hover{border-color:rgba(0,229,255,.22);background:rgba(0,229,255,.04)}.agn-card b{font-size:.78rem;font-weight:600;color:#dde8f0}.agn-card span{font-size:.68rem;color:#3a5060;line-height:1.35}.agn-ft{margin-top:32px;padding-top:14px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}.agn-ft span{font-size:.65rem;color:#243040}.agn-ft-links{display:flex;gap:14px}.agn-ft-links a{font-size:.65rem;color:#3a5060;text-decoration:none}.agn-ft-links a:hover{color:#00e5ff}</style>';var f=s+'<footer id="agn-eco"><div class="agn-w"><div class="agn-hd"><h3>&#9889; Agentesia Ecosystem</h3><p>Infraestructura de inteligencia artificial para Latinoam\u00e9rica</p><span class="agn-badge">Ahora explorando: '+c.name+'</span></div><div class="agn-grid"><div class="agn-col"><h4>Automatizaci\u00f3n</h4>'+cards('a')+'</div><div class="agn-col"><h4>Seguridad &amp; An\u00e1lisis</h4>'+cards('s')+'</div><div class="agn-col"><h4>Educaci\u00f3n &amp; Comunidad</h4>'+cards('e')+'</div></div><div class="agn-ft"><span>&copy; 2026 Agentesia &middot; Hecho en Panam\u00e1 &#127477;&#127462;</span><div class="agn-ft-links"><a href="https://agentxia.pages.dev" target="_blank">AgentXIA</a><a href="https://vulnerafix.com" target="_blank">VulneraFix</a><a href="https://academia-pro.pages.dev" target="_blank">AcademIA</a></div></div></div></footer>';document.body.insertAdjacentHTML('beforeend',f);fetch('https://agentesia-api.aalvarez351.workers.dev/api/visits',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({project_id:c.id,page:location.pathname,referrer:document.referrer}),keepalive:true}).catch(function(){})}({id:'PROJ-001',name:'VulneraFix'});</script>
 </body>
 </html>
